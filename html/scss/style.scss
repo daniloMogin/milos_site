@@ -1,0 +1,210 @@
+/*----------  config
+------------------------------------------------------------------------------*/
+@import "compass";
+@import "config/reset";
+@import "config/variables";
+@import "config/typography";
+
+/*----------  helpers
+------------------------------------------------------------------------------*/
+@import "helpers/mixins";
+
+/*----------  layout
+------------------------------------------------------------------------------*/
+@import "layout/layout";
+@import "layout/icons";
+@import "layout/buttons";
+
+/*----------  libs
+------------------------------------------------------------------------------*/
+@import "libs/flexslider";
+
+/*----------  partials
+------------------------------------------------------------------------------*/
+@import "partials/header";
+@import "partials/footer";
+
+/*----------  hero
+------------------------------------------------------------------------------*/
+.hero {
+    clear: both;
+    .hero-frame {
+        width: 100%;
+        background: url("../../assets/img/content/hero-banner.jpg") no-repeat center top;
+        background-size: cover;
+        min-height: 500px;
+    }
+}
+
+/*----------  slider
+------------------------------------------------------------------------------*/
+.slider {
+    clear: both;
+    .hide {
+        display: none;
+    }
+    .overlay {
+        max-width: 980px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 15px 0;
+        z-index: 999;
+        margin: 0 auto;
+    }
+    .flexslider {
+        margin: 0;
+        border: 0;
+        position: relative;
+
+    }
+    .slides li {
+        position: relative;
+    }
+    img {
+        min-height: 430px;
+    }
+    .flex-direction-nav {
+        display: none !important;
+    }
+    .flex-caption{
+        left:0 !important;
+    }
+    .flex-control-nav {
+        bottom: 50px;
+    }
+    .flex-control-paging li a {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .flex-control-paging li a:hover {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .flex-control-paging li a.flex-active {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
+    }    
+    .flex-caption {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 96%;
+        padding: 2%;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+        font-size: 14px;
+        line-height: 18px;
+        h2 {
+            color: $white;
+            text-align: center;
+            border-bottom: 1px solid $white;
+            margin: 65px 0 3px 0;    
+            padding-bottom: 3px;
+        }
+        .slider-caption-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding-top: 33px;
+            i {
+                margin: 8px 20px 0 0;
+                float: left;
+            }
+            .right {
+                float: right;
+                margin: 8px 0 0 30px;
+            }
+            p {
+                font-weight: 700;
+                color: $white;
+                text-align: center;
+            }
+            .cite {
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: center;
+                padding: 0;
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+        .slides li {
+            max-height: 339px;
+        }
+        .flex-control-nav {
+            bottom: 40px;
+        }
+        .flex-caption {
+            h2 {
+                font-size: 30px;
+                line-height: 40px;
+                margin: 48px 0 3px 0;
+            }
+            .slider-caption-wrap {
+                padding-top: 18px;
+                i {
+                    margin: 10px 34px 0 35px;
+                }
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    padding-top: 3px;
+                }
+                .cite {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+                .right {
+                    margin: 10px 17px 0 30px;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        .overlay {
+            padding: 1px 0 0 21px;
+        }
+        .show {
+            display: none;
+        }
+        .hide {
+            display: block;
+            float: left;
+            padding-left: 5px;
+        }
+        .slides li {
+            max-height: 344px;
+        }
+        .flex-control-nav {
+            bottom: 30px;
+            left: 15px;
+            text-align: left;
+        }
+        .flex-caption {
+            h2 {
+                font-size: 20px;
+                text-align: left;
+                border: 0;
+                margin: 0;
+            }
+            .slider-caption-wrap {
+                padding: 0;
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-align: left;
+                    clear: both;
+                    padding-top: 7px;
+                }
+                .cite {
+                    font-size: 15px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/*----------  pricing
+------------------------------------------------------------------------------*/

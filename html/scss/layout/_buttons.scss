@@ -1,0 +1,40 @@
+.btn {
+    border: 0;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: .5px;
+    color: $white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &.small {
+        padding: 13px 20px;
+        background-color: $blue;
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
+
+    &.big {
+        padding: 18px 35px;
+        background-color: $blue;
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
+
+    &.sm {
+        padding: 12px 53px;
+        background-color: $blue;
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
+
+    &.med {
+        padding: 12px 53px;
+        background-color: $blue;
+    }
+}

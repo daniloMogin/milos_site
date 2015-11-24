@@ -1,0 +1,158 @@
+.header {
+    background-color: $gray;
+    text-align: center;
+    position: relative;
+    .logo {
+        height: 100px;
+        width: 100px;
+        margin: 15px 0;
+    }
+    .show {
+        display: block;
+    }
+    .none {
+        display: none;
+    }
+    .hide-nav-btn {
+        display: none;
+    }
+    .mobile-nav {
+        display: none;
+    }
+    ul.menubar {
+        list-style: none;
+        font-size: 14px;
+        padding: 0 10px;
+        > li {
+            display: inline-block;
+            position: relative;
+            > a {
+                color: black;
+                display: block;
+                padding: 10px 14px;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: 1px solid $white;
+                    color: white;
+                }
+            }
+            > ul {
+                @include box-shadow(rgba(black, 0.5) 0 5px 15px);
+                @include border-radius(3px);
+                @include border-top-left-radius(0);
+                display: none;
+                position: absolute;
+                top: 100%;
+                list-style: none;
+                width: 15em;
+                padding: 10px 0;
+                > li > a {
+                    color: black;
+                    display: block;
+                    padding: 8px 20px;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: #29a7f5;
+                        color: white;
+                    }
+                }
+                > li.separator {
+                    border-top: 1px solid #ddd;
+                    margin: 8px;
+                }
+            }
+            &.is-selected {
+                > a {
+                    background: #29a7f5;
+                    color: white;
+                }
+                > ul { 
+                    display: block;
+                    z-index: 9999;
+                }
+            }
+        }
+    }
+    .fix-nav {
+        z-index: 9999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $gray;
+    }
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        padding: 0;
+        padding-bottom: 20px;
+        .mob-nav-on {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 56px;
+            right: 30px;
+        }
+        .main-nav {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .hide-nav-btn {
+            display: block;
+            float: right;
+        }
+        .mobile-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: url("../../assets/img/content/doted-back.jpg");
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            width: 100%;
+            display: block;
+            float: left;
+            clear: both;
+            h2 {
+                padding: 30px 0;
+            }
+            ul {
+                &:first-of-type {
+                    padding: 20px 20px;
+                }
+                padding: 0 20px;
+                &:nth-of-type(2) {
+                    border-top: 1px solid $gray;
+                    padding-top: 20px;
+                }
+                &:last-of-type {
+                    padding-bottom: 20px;
+                }
+                li {
+                    padding: 5px 0;
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+            .mob-nav-off {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 56px;
+                right: 30px;
+            }
+        }
+        .none {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    }
+}
