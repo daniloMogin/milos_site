@@ -247,6 +247,8 @@
 ------------------------------------------------------------------------------*/
 .what-we-do {
     text-align: center;
+    background-color: $gray-light;
+    padding: 40px 0;
     .grid {
         position: relative;
         clear: both;
@@ -264,8 +266,8 @@
         margin: 10px 1%;
         max-width: 18%;
         max-height: 18%;
-//        min-width: 250px;
-//        min-height: 250px;
+        //        min-width: 250px;
+        //        min-height: 250px;
         width: 48%;
         height: auto;
         background: #3085a3;
@@ -332,7 +334,7 @@
         letter-spacing: 1px;
         font-size: 68.5%;
     }
-    
+
     figure.effect-lexi img {
         margin: -10px 0 0 -10px;
         max-width: none;
@@ -415,20 +417,14 @@
 .our-work {
     text-align: center;
     height: 500px;
-    background-color: aqua;
+    background-color: $green;
 }
 
-/*----------  our work
+/*----------  clients
 ------------------------------------------------------------------------------*/
 .clients {
     text-align: center;
-    
-    
-    
-    
-    /********************************
-    * generic als elements styling
-    ********************************/
+
     .als-container {
         position: relative;
         width: 100%;
@@ -460,12 +456,6 @@
         clear: both;
     }
 
-
-    /**************************
-    * specific als elements
-    * styling for #lista1
-    **************************/
-
     #lista1 {
         margin: 60px auto 80px auto;
     }
@@ -496,6 +486,40 @@
     #lista1 .als-next {
         right: 100px;
     }
-    
-    
+}
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.news {
+    text-align: center;
+    background-color: $blue;
+    min-height: 500px;
+}
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.contact {
+    text-align: center;
+    background-color: $gray;
+    padding: 40px 0;
+    h2 {
+        padding-bottom: 35px;  
+    }
+
+    .personal-info {
+        background-color: aqua;
+        text-align: left;
+        margin: 0 auto;
+        width: 90%;
+        .main-info {
+            background-color: antiquewhite;
+            float: left;
+            width: 50%;
+        }
+        .contact-form {
+            background-color: azure;
+            float: right;
+            width: 50%;
+        }
+    }
 }

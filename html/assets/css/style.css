@@ -1074,6 +1074,8 @@ html[xmlns] .flexslider .slides {
 ------------------------------------------------------------------------------*/
 .what-we-do {
   text-align: center;
+  background-color: #DDDAD6;
+  padding: 40px 0;
   /* Common style */
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */ }
@@ -1202,19 +1204,12 @@ html[xmlns] .flexslider .slides {
 .our-work {
   text-align: center;
   height: 500px;
-  background-color: aqua; }
+  background-color: #00a8a1; }
 
-/*----------  our work
+/*----------  clients
 ------------------------------------------------------------------------------*/
 .clients {
-  text-align: center;
-  /********************************
-  * generic als elements styling
-  ********************************/
-  /**************************
-  * specific als elements
-  * styling for #lista1
-  **************************/ }
+  text-align: center; }
   .clients .als-container {
     position: relative;
     width: 100%;
@@ -1255,3 +1250,32 @@ html[xmlns] .flexslider .slides {
     left: 90px; }
   .clients #lista1 .als-next {
     right: 100px; }
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.news {
+  text-align: center;
+  background-color: #A6D8DE;
+  min-height: 500px; }
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.contact {
+  text-align: center;
+  background-color: #9d9fa2;
+  padding: 40px 0; }
+  .contact h2 {
+    padding-bottom: 35px; }
+  .contact .personal-info {
+    background-color: aqua;
+    text-align: left;
+    margin: 0 auto;
+    width: 90%; }
+    .contact .personal-info .main-info {
+      background-color: antiquewhite;
+      float: left;
+      width: 50%; }
+    .contact .personal-info .contact-form {
+      background-color: azure;
+      float: right;
+      width: 50%; }

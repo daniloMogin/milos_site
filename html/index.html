@@ -200,9 +200,9 @@
                 <span class="als-prev"><img src="assets/img/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
                 <div class="als-viewport">
                     <ul class="als-wrapper">
-                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="calculator" title="calculator" />calculator</li>
-                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="light bulb" title="light bulb" />light bulb</li>
-                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="card" title="card" />card</li>
+                        <li class="als-item"><a href="http://www.renault.rs/"><img src="assets/img/als-images/renault.png" alt="renault" title="renault" /></a>Renault</li>
+                        <li class="als-item"><a href="http://www.dacia.rs/"><img src="assets/img/als-images/dacia.png" alt="dacia" title="dacia" /></a>Dacia</li>
+                        <li class="als-item"><img src="assets/img/als-images/danilo.png" alt="danilo" title="danilo" />Danilo</li>
                         <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="chess" title="chess" />chess</li>
                         <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="alarm clock" title="alarm clock" />alarm clock</li>
                         <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="scissors" title="scissors" />scissors</li>
@@ -217,6 +217,48 @@
                 </div>
                 <span class="als-next"><img src="assets/img/thin_right_arrow_333.png" alt="next" title="next" /></span>
             </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="main-grid">
+            <h2>News</h2>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="main-grid">
+            <h2>Contact</h2>
+            <section class="personal-info">
+                <div class="main-info">
+                    <p>Name: Foo</p>
+                    <p>Surname: Bar</p>
+                    <p>Email: <a href="javascript:;">foo.bar@foobar.com</a></p>
+                    <p>Address: <a href="https://www.google.rs/maps/place/45%C2%B015'20.4%22N+19%C2%B048'41.8%22E/@45.2556668,19.8094153,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en">Nedodjija 42, Novi Sad</a></p>
+                    <p>Phone: +381/555-444</p>
+                </div>
+                <div class="contact-form">
+                    <form id="ajax-contact" method="post" action="mailer.php">
+                        <div class="field">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <div class="field">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
     </section>
 
@@ -248,9 +290,11 @@
                 </div>
                 <ul class="right">
                     <li><a href="javascript:;">About Us</a></li>
-                    <li><a href="javascript:;">Gallery</a></li>
+                    <li><a href="javascript:;">What We Do</a></li>
+                    <li><a href="javascript:;">Our work</a></li>
+                    <li><a href="javascript:;">Clients</a></li>
+                    <li><a href="javascript:;">News</a></li>
                     <li><a href="javascript:;">Contact</a></li>
-                    <li><a href="javascript:;">Login</a></li>
                 </ul>
             </div>
         </section>

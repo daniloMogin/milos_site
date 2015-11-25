@@ -84,7 +84,8 @@ $('document').ready(function($) {
     
     
     
-    
+/*----------  clients
+------------------------------------------------------------------------------*/
     $("#lista1").als({
         visible_items: 4,
         scrolling_items: 2,
