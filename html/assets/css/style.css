@@ -245,7 +245,11 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #000;
-  background-image: url("/assets/img/content/hero-banner.jpg"); }
+  background: -moz-linear-gradient(left, rgba(128, 128, 128, 0), gray), url("../../assets/img/content/pola_glave.png") no-repeat left fixed;
+  background: -webkit-linear-gradient(left, rgba(128, 128, 128, 0), gray), url("../../assets/img/content/pola_glave.png") no-repeat left fixed;
+  background: -o-linear-gradient(left, rgba(128, 128, 128, 0), gray), url("../../assets/img/content/pola_glave.png") no-repeat left fixed;
+  background: -ms-linear-gradient(left, rgba(128, 128, 128, 0), gray), url("../../assets/img/content/pola_glave.png") no-repeat left fixed;
+  background: linear-gradient(to right, rgba(128, 128, 128, 0), #808080), url("../../assets/img/content/pola_glave.png") no-repeat left fixed; }
 
 .fix-body {
   margin-top: 120px; }
@@ -256,9 +260,10 @@ h1 {
   line-height: 50px; }
 
 h2 {
-  font-weight: 900;
+  font-weight: 300;
   font-size: 50px;
-  line-height: 40px; }
+  line-height: 80px;
+  padding: 40px 0; }
 
 h3 {
   font-weight: 300;
@@ -1060,7 +1065,7 @@ html[xmlns] .flexslider .slides {
 ------------------------------------------------------------------------------*/
 .about-us {
   text-align: center;
-  padding: 40px 0;
+  padding-bottom: 40px;
   clear: both; }
   .about-us span > a > img {
     width: 150px;
@@ -1075,7 +1080,7 @@ html[xmlns] .flexslider .slides {
 .what-we-do {
   text-align: center;
   background-color: #DDDAD6;
-  padding: 40px 0;
+  padding-bottom: 40px;
   /* Common style */
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */ }
@@ -1204,12 +1209,14 @@ html[xmlns] .flexslider .slides {
 .our-work {
   text-align: center;
   height: 500px;
-  background-color: #00a8a1; }
+  background-color: #00a8a1;
+  padding-bottom: 40px; }
 
 /*----------  clients
 ------------------------------------------------------------------------------*/
 .clients {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 40px; }
   .clients .als-container {
     position: relative;
     width: 100%;
@@ -1255,27 +1262,23 @@ html[xmlns] .flexslider .slides {
 ------------------------------------------------------------------------------*/
 .news {
   text-align: center;
-  background-color: #A6D8DE;
   min-height: 500px; }
 
 /*----------  News
 ------------------------------------------------------------------------------*/
 .contact {
   text-align: center;
-  background-color: #9d9fa2;
-  padding: 40px 0; }
-  .contact h2 {
-    padding-bottom: 35px; }
+  background-color: #9d9fa2; }
   .contact .personal-info {
-    background-color: aqua;
     text-align: left;
     margin: 0 auto;
-    width: 90%; }
+    width: 100%; }
     .contact .personal-info .main-info {
-      background-color: antiquewhite;
       float: left;
       width: 50%; }
     .contact .personal-info .contact-form {
-      background-color: azure;
       float: right;
       width: 50%; }
+    .contact .personal-info #map {
+      width: 100%;
+      height: 600px; }

@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/scripts/modernizr.mini.js"></script>
+    
 </head>
 <body>
     <header class="header">
@@ -151,7 +153,7 @@
                     </figcaption>			
                 </figure>
                 <figure class="effect-lexi">
-                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <img src="assets/img/content/12.jpg" alt="img12"/>
                     <figcaption>
                         <h2>Lorem <span>Ipsum</span></h2>
                         <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
@@ -159,7 +161,7 @@
                     </figcaption>			
                 </figure>
                 <figure class="effect-lexi">
-                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <img src="assets/img/content/7.jpg" alt="img12"/>
                     <figcaption>
                         <h2>Lorem <span>Ipsum</span></h2>
                         <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
@@ -167,7 +169,7 @@
                     </figcaption>			
                 </figure>
                 <figure class="effect-lexi">
-                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <img src="assets/img/content/6.jpg" alt="img12"/>
                     <figcaption>
                         <h2>Lorem <span>Ipsum</span></h2>
                         <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
@@ -258,6 +260,7 @@
                         </div>
                     </form>
                 </div>
+                <div id="map"></div>
             </section>
         </div>
     </section>
@@ -304,5 +307,58 @@
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/jQuery.scrollSpeed.js"></script>
     <script src="assets/scripts/script.js"></script>
+    <script>
+
+        // This example displays a marker at the center of Australia.
+        // When the user clicks the marker, an info window opens.
+
+        function initMap() {
+            var novi_sad = {lat: 45.27143, lng: 19.7794013};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                scrollwheel: false,
+                center: novi_sad
+            });
+
+            var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Novi Sad</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Novi Sad</b>, also referred to as <b>Tokio</b>, is a large ' +
+                'sandstone rock formation in the southern part of the '+
+                'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+                'south west of the nearest large town, Alice Springs; 450&#160;km '+
+                '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+                'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+                'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+                'Aboriginal people of the area. It has many springs, waterholes, '+
+                'rock caves and ancient paintings. Uluru is listed as a World '+
+                'Heritage Site.</p>'+
+                '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+                'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+                '(last visited June 22, 2009).</p>'+
+                '</div>'+
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: novi_sad,
+                map: map,
+                title: 'Uluru (Ayers Rock)'
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+                map.setZoom(14);
+                map.setCenter(marker.getPosition());
+            });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD03T5FJ2ungRgmdERijSrfASBKuz4dCE0&signed_in=true&callback=initMap"></script>
 </body>
 </html>
