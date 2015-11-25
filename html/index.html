@@ -10,6 +10,7 @@
     <meta name="description" content="Jimmy site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/scripts/modernizr.mini.js"></script>
 </head>
@@ -19,97 +20,203 @@
             <div class="main-grid">
                 <div class="nav">
                     <ul class="menubar">
-                        <li><a href="javascript:;"><img src="assets/img/logo.png" alt="" class="logo" /></a></li>
+                        <a href="javascript:;"><img src="assets/img/logo.png" alt="" class="logo" /></a>
                         <li><a href="javascript:;">About Us</a></li>
                         <li><a href="javascript:;">What we do</a></li>
                         <li><a href="javascript:;">Our work</a></li>
                         <li><a href="javascript:;">Clients</a></li>
                         <li><a href="javascript:;">News</a></li>
                         <li><a href="javascript:;">Contact</a></li>
-                        <li><a href="javascript:;"><i class="ico facebook"></i></a></li>
-                        <li><a href="javascript:;"><i class="ico twitter"></i></a></li>
-                        <li><a href="javascript:;"><i class="ico linkedIn"></i></a></li>
-                        <li><a href="javascript:;"><span><i class="ico whatsapp"></i></span></a></li>
+                        <span>
+                            <a href="javascript:;"><i class="ico facebook"></i></a>
+                            <a href="javascript:;"><i class="ico twitter"></i></a>
+                            <a href="javascript:;"><i class="ico linkedIn"></i></a>
+                            <a href="javascript:;"><i class="ico whatsapp"></i></a>
+                        </span>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <div class="mobile-wrap">
+            <a href="javascript:;"><img src="assets/img/logo.png" alt="" class="logo none-logo" /></a>
             <div class="nav-btn hide-nav-btn">
                 <a href="javascript:;"><img src="assets/img/content/menu-burger.png" alt="" class="mob-nav-on" /></a>
             </div>
             <nav class="mobile-nav none">
                 <ul>
                     <li>
-                        <h2>Jimmy</h2>
+                        <a href="javascript:;"><img src="assets/img/logo.png" alt="" class="logo-mob-nav" /></a>
                         <div class="nav-btn hide-nav-btn">
                             <a href="javascript:;"><img src="assets/img/content/menu-exit.png" alt="" class="mob-nav-off" /></a>
                         </div>
                     </li>
                 </ul>
-                <ul>
+                <ul class="mobile-links">
                     <li><a href="javascript:;">About Us</a></li>
                     <li><a href="javascript:;">What we do</a></li>
                     <li><a href="javascript:;">Our work</a></li>
                     <li><a href="javascript:;">Clients</a></li>
                     <li><a href="javascript:;">News</a></li>
                     <li><a href="javascript:;">Contact</a></li>
+                    <span>
+                        <a href="javascript:;"><i class="ico facebook"></i></a>
+                        <a href="javascript:;"><i class="ico twitter"></i></a>
+                        <a href="javascript:;"><i class="ico linkedIn"></i></a>
+                        <a href="javascript:;"><i class="ico whatsapp"></i></a>
+                    </span>
                 </ul>
             </nav> <!-- end of mobile navigation -->
         </div>
     </header>
 
-    <section>
-        <div class="slider">
-            <div class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img src="assets/img/content/hero-banner.jpg" alt="" />
-                        <div class="flex-caption main-grid">
-                            <div class="center">
-                                <h1>frontend developer</h1>
-                                <div class="gray-bck">
-                                    <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                                </div>
-                            </div>
+    <section class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="assets/img/content/hero-banner.jpg" alt="" />
+                    <div class="flex-caption main-grid">
+                        <div class="gray-bck">
+                            <h2>Social Bear Media</h2>
+                            <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="assets/img/content/hero-banner.jpg" alt="" />
-                        <div class="flex-caption main-grid">
-                            <div class="center">
-                                <h1>frontend developer</h1>
-                                <div class="gray-bck">
-                                    <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                                </div>
-                            </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/content/hero-banner.jpg" alt="" />
+                    <div class="flex-caption main-grid">
+                        <div class="gray-bck">
+                            <h2>Social Bear Media</h2>
+                            <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="assets/img/content/hero-banner.jpg" alt="" />
-                        <div class="flex-caption main-grid">
-                            <div class="center">
-                                <h1>frontend developer</h1>
-                                <div class="gray-bck">
-                                    <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
-                                </div>
-                            </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="assets/img/content/hero-banner.jpg" alt="" />
+                    <div class="flex-caption main-grid">
+                        <div class="gray-bck">
+                            <h2>Social Bear Media</h2>
+                            <p>Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                         </div>
-                    </li>
-                </ul>
-                <div class="custom-navigation">
-                    <a href="#" class="flex-prev"><img src="assets/img/content/slider-left.png" alt="" /></a>
-                    <div class="custom-controls-container"></div>
-                    <a href="#" class="flex-next"><img src="assets/img/content/slider-right.png" alt="" /></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-overlay">
+            <div class="statsbar">
+                <div class="stat-one">
+                    <div class="stat-number" data-n="2256"><span class="Single">0</span>
+                    </div>
+                    <div class="stat-title">CUPS OF TEA A DAY</div>
+                </div>
+                <div class="stat-two">
+                    <div class="stat-number" data-n="62">0</div>
+                    <div class="stat-title">MINIMUM HOURS OF SLEEP A WEEK</div>
+                </div>
+                <div class="stat-three">
+                    <div class="stat-number" data-n="10">0</div>
+                    <div class="stat-title">CUPS OF TEA A DAY</div>
+                </div>
+                <div class="stat-four">
+                    <div class="stat-number" data-n="15" data-sym="%">0</div>
+                    <div class="stat-title">HOURS SLEEP A WEEK</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section>
-        <div class="stats">
-            
+
+    <section class="about-us">
+        <div class="main-grid">
+            <h2>About Us</h2>
+            <span>
+                <a href="javascript:;"><img src="assets/img/logo.png" alt="About us slika"></a>
+            </span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus molestias aperiam, repellat veniam animi quidem tenetur, voluptate nulla laudantium a aspernatur odio earum molestiae illum quae, expedita dolorum hic, voluptatem.</p>
+        </div>
+    </section>
+
+    <section class="what-we-do">
+        <div class="main-grid">
+            <h2>What We Do</h2>
+            <div class="grid">
+                <figure class="effect-lexi">
+                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <figcaption>
+                        <h2>Lorem <span>Ipsum</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur.</p>
+                        <a href="javascript:;">View more</a>
+                    </figcaption>			
+                </figure>
+                <figure class="effect-lexi">
+                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <figcaption>
+                        <h2>Lorem <span>Ipsum</span></h2>
+                        <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
+                        <a href="javascript:;">View more</a>
+                    </figcaption>			
+                </figure>
+                <figure class="effect-lexi">
+                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <figcaption>
+                        <h2>Lorem <span>Ipsum</span></h2>
+                        <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
+                        <a href="javascript:;">View more</a>
+                    </figcaption>			
+                </figure>
+                <figure class="effect-lexi">
+                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <figcaption>
+                        <h2>Lorem <span>Ipsum</span></h2>
+                        <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
+                        <a href="javascript:;">View more</a>
+                    </figcaption>			
+                </figure>
+                <figure class="effect-lexi">
+                    <img src="assets/img/content/medved-tastatura.png" alt="img12"/>
+                    <figcaption>
+                        <h2>Lorem <span>Ipsum</span></h2>
+                        <p>Each and every friend is special. Lexi won't hide a single cookie.</p>
+                        <a href="javascript:;">View more</a>
+                    </figcaption>			
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-work">
+        <div class="main-grid">
+            <h2>Our Work</h2>
+
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="main-grid">
+            <h2>Clients</h2>
+            <div id="lista1" class="als-container">
+                <span class="als-prev"><img src="assets/img/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+                <div class="als-viewport">
+                    <ul class="als-wrapper">
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="calculator" title="calculator" />calculator</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="light bulb" title="light bulb" />light bulb</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="card" title="card" />card</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="chess" title="chess" />chess</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="alarm clock" title="alarm clock" />alarm clock</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="scissors" title="scissors" />scissors</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="heart" title="heart" />heart</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="pin" title="pin" />pin</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="mobile phone" title="mobile phone" />mobile phone</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="camera" title="camera" />camera</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="music note" title="music note" />music note</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="umbrella" title="umbrella" />umbrella</li>
+                        <li class="als-item"><img src="assets/img/als-images/calculator.png" alt="television" title="television" />television</li>
+                    </ul>
+                </div>
+                <span class="als-next"><img src="assets/img/thin_right_arrow_333.png" alt="next" title="next" /></span>
+            </div>
         </div>
     </section>
 
@@ -137,7 +244,7 @@
         <section class="footer-bottom">
             <div class="main-grid">
                 <div class="left">
-                    <p>@ copyright 2016-17 RA245/2013</p>
+                    <p>@ copyright 2016-17 Danilo Mogin</p>
                 </div>
                 <ul class="right">
                     <li><a href="javascript:;">About Us</a></li>
@@ -149,7 +256,7 @@
         </section>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/scripts/jquery.als-1.7.min.js"></script>
     <script src="assets/scripts/jquery.flexslider-min.js"></script>
     <script src="assets/scripts/jQuery.scrollSpeed.js"></script>
     <script src="assets/scripts/script.js"></script>

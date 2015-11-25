@@ -2,10 +2,11 @@ body {
     font-family: $font-main;
     font-size: 14px;
     color: $black;
+    background-image: url("/assets/img/content/hero-banner.jpg");
 }
 
 .fix-body {
-    margin-top: 40px;
+    margin-top: 120px;
 }
 
 h1 {

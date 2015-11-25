@@ -244,10 +244,11 @@ td {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: #000; }
+  color: #000;
+  background-image: url("/assets/img/content/hero-banner.jpg"); }
 
 .fix-body {
-  margin-top: 40px; }
+  margin-top: 120px; }
 
 h1 {
   font-weight: 900;
@@ -323,6 +324,16 @@ html #border-box {
     background-color: aqua;
     position: relative; }
     .main-grid .stats-col:last-of-type {
+      margin-right: 0; }
+  .main-grid .what-we-do-col {
+    box-sizing: border-box;
+    width: 19%;
+    float: left;
+    margin-right: 1.2%;
+    text-align: center;
+    position: relative;
+    cursor: pointer; }
+    .main-grid .what-we-do-col:last-of-type {
       margin-right: 0; }
   @media only screen and (min-width: 50px) and (max-width: 767px) {
     .main-grid {
@@ -722,10 +733,12 @@ html[xmlns] .flexslider .slides {
   .header .logo {
     height: 100px;
     width: 100px;
-    margin: 15px 0; }
+    padding: 10px 0; }
   .header .show {
     display: block; }
   .header .none {
+    display: none; }
+  .header .none-logo {
     display: none; }
   .header .hide-nav-btn {
     display: none; }
@@ -735,50 +748,32 @@ html[xmlns] .flexslider .slides {
     list-style: none;
     font-size: 14px;
     padding: 0 10px; }
+    .header ul.menubar > a {
+      float: left; }
     .header ul.menubar > li {
       display: inline-block;
-      position: relative; }
+      position: relative;
+      margin-top: 39px; }
       .header ul.menubar > li > a {
         color: black;
         display: block;
-        padding: 10px 14px;
+        margin: 0 10px;
+        padding: 10px 0;
         text-decoration: none; }
         .header ul.menubar > li > a:hover {
           border-bottom: 1px solid #fff;
           color: white; }
-      .header ul.menubar > li > ul {
-        -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
-        box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        -moz-border-radius-topleft: 0;
-        -webkit-border-top-left-radius: 0;
-        border-top-left-radius: 0;
-        display: none;
-        position: absolute;
-        top: 100%;
-        list-style: none;
-        width: 15em;
-        padding: 10px 0; }
-        .header ul.menubar > li > ul > li > a {
-          color: black;
-          display: block;
-          padding: 8px 20px;
-          text-decoration: none; }
-          .header ul.menubar > li > ul > li > a:hover {
-            background: #29a7f5;
-            color: white; }
-        .header ul.menubar > li > ul > li.separator {
-          border-top: 1px solid #ddd;
-          margin: 8px; }
       .header ul.menubar > li.is-selected > a {
         background: #29a7f5;
         color: white; }
       .header ul.menubar > li.is-selected > ul {
         display: block;
         z-index: 9999; }
+    .header ul.menubar > span {
+      float: right;
+      margin-top: 45px; }
+      .header ul.menubar > span > a {
+        margin-right: 15px; }
   .header .fix-nav {
     z-index: 9999;
     position: fixed;
@@ -787,60 +782,71 @@ html[xmlns] .flexslider .slides {
     width: 100%;
     background-color: #9d9fa2; }
   @media only screen and (min-width: 50px) and (max-width: 767px) {
-    .header {
-      padding: 0;
-      padding-bottom: 20px; }
-      .header .mob-nav-on {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 56px;
-        right: 30px; }
-      .header .main-nav {
-        display: none; }
-      .header .hidden {
-        display: none; }
-      .header .hide-nav-btn {
-        display: block;
-        float: right; }
-      .header .mobile-nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        background: url("../../assets/img/content/doted-back.jpg");
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 20px;
-        width: 100%;
-        display: block;
-        float: left;
-        clear: both; }
-        .header .mobile-nav h2 {
-          padding: 30px 0; }
-        .header .mobile-nav ul {
-          padding: 0 20px; }
-          .header .mobile-nav ul:first-of-type {
-            padding: 20px 20px; }
-          .header .mobile-nav ul:nth-of-type(2) {
-            border-top: 1px solid #9d9fa2;
-            padding-top: 20px; }
-          .header .mobile-nav ul:last-of-type {
-            padding-bottom: 20px; }
-          .header .mobile-nav ul li {
-            padding: 5px 0; }
-            .header .mobile-nav ul li a {
-              color: #fff; }
-        .header .mobile-nav .mob-nav-off {
-          width: 40px;
-          height: 40px;
-          position: absolute;
-          top: 56px;
-          right: 30px; }
-      .header .none {
-        display: none; }
-      .header .show {
-        display: block; } }
+    .header .mob-nav-on {
+      position: absolute;
+      top: 53px;
+      right: 20px; }
+    .header .mob-nav-off {
+      position: absolute;
+      top: 53px;
+      right: 20px; }
+    .header .logo-mob-nav {
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 10px 0;
+      padding: 0 0 10px 10px; }
+    .header .none-logo {
+      display: block;
+      padding: 10px 0 10px 10px; }
+    .header .nav {
+      display: none; }
+    .header .hidden {
+      display: none; }
+    .header .hide-nav-btn {
+      display: block;
+      float: right; }
+    .header .mobile-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 60;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 20px;
+      width: 100%;
+      display: block;
+      float: left;
+      clear: both;
+      background-color: #9d9fa2; }
+      .header .mobile-nav .sub-menu {
+        padding: 0 0; }
+      .header .mobile-nav ul.mobile-links {
+        clear: both;
+        background-color: #9d9fa2; }
+        .header .mobile-nav ul.mobile-links li {
+          padding: 10px 0; }
+          .header .mobile-nav ul.mobile-links li a {
+            text-align: left;
+            color: #fff;
+            font-weight: 300; }
+            .header .mobile-nav ul.mobile-links li a:hover {
+              color: #00a8a1; }
+        .header .mobile-nav ul.mobile-links span > a {
+          padding: 0 15px;
+          line-height: 100px; }
+    .header .none {
+      display: none; }
+    .header .show {
+      display: none;
+      -moz-transition-duration: 2s;
+      -o-transition-duration: 2s;
+      -webkit-transition-duration: 2s;
+      transition-duration: 2s;
+      -moz-transition-timing-function: ease-in;
+      -o-transition-timing-function: ease-in;
+      -webkit-transition-timing-function: ease-in;
+      transition-timing-function: ease-in; } }
 
 .footer {
   background-color: #9d9fa2;
@@ -896,22 +902,12 @@ html[xmlns] .flexslider .slides {
           .footer .footer-bottom ul li > a:hover {
             color: #9d9fa2; }
 
-/*----------  hero
-------------------------------------------------------------------------------*/
-.hero {
-  clear: both; }
-  .hero .hero-frame {
-    width: 100%;
-    background: url("../../assets/img/content/hero-banner.jpg") no-repeat center top;
-    background-size: cover;
-    min-height: 500px; }
-
 /*----------  slider
 ------------------------------------------------------------------------------*/
 .slider {
-  clear: both; }
-  .slider .hide {
-    display: none; }
+  clear: both;
+  text-align: center;
+  min-height: 100%; }
   .slider .overlay {
     max-width: 980px;
     position: absolute;
@@ -922,12 +918,7 @@ html[xmlns] .flexslider .slides {
     margin: 0 auto; }
   .slider .flexslider {
     margin: 0;
-    border: 0;
-    position: relative; }
-  .slider .slides li {
-    position: relative; }
-  .slider img {
-    min-height: 430px; }
+    border: 0; }
   .slider .flex-direction-nav {
     display: none !important; }
   .slider .flex-caption {
@@ -943,43 +934,27 @@ html[xmlns] .flexslider .slides {
   .slider .flex-control-paging li a.flex-active {
     background: #fff;
     background: rgba(255, 255, 255, 0.9); }
-  .slider .flex-caption {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 96%;
-    padding: 2%;
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    line-height: 18px; }
-    .slider .flex-caption h2 {
+  .slider .slides li {
+    position: relative; }
+    .slider .slides li .flex-caption {
+      position: absolute;
+      top: 0;
+      padding: 2%;
       color: #fff;
-      text-align: center;
-      border-bottom: 1px solid #fff;
-      margin: 65px 0 3px 0;
-      padding-bottom: 3px; }
-    .slider .flex-caption .slider-caption-wrap {
-      max-width: 860px;
-      margin: 0 auto;
-      padding-top: 33px; }
-      .slider .flex-caption .slider-caption-wrap i {
-        margin: 8px 20px 0 0;
-        float: left; }
-      .slider .flex-caption .slider-caption-wrap .right {
-        float: right;
-        margin: 8px 0 0 30px; }
-      .slider .flex-caption .slider-caption-wrap p {
-        font-weight: 700;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      line-height: 18px; }
+      .slider .slides li .flex-caption .gray-bck {
+        background: rgba(0, 168, 161, 0.5);
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; }
+      .slider .slides li .flex-caption h2 {
         color: #fff;
-        text-align: center; }
-      .slider .flex-caption .slider-caption-wrap .cite {
-        font-weight: 300;
-        font-size: 20px;
-        line-height: 30px;
-        text-align: center;
-        padding: 0; }
-  @media only screen and (min-width: 768px) and (max-width: 980px) {
+        padding: 15px 0; }
+      .slider .slides li .flex-caption p {
+        padding: 15px 15px; }
+  @media only screen and (min-width: 768px) and (max-width: 850px) {
     .slider .slides li {
       max-height: 339px; }
     .slider .flex-control-nav {
@@ -1015,7 +990,8 @@ html[xmlns] .flexslider .slides {
     .slider .flex-control-nav {
       bottom: 30px;
       left: 15px;
-      text-align: left; }
+      text-align: left;
+      width: 50%; }
     .slider .flex-caption h2 {
       font-size: 20px;
       text-align: left;
@@ -1033,5 +1009,249 @@ html[xmlns] .flexslider .slides {
         font-size: 15px;
         text-align: left; } }
 
-/*----------  pricing
+/*----------  stats
 ------------------------------------------------------------------------------*/
+.stats {
+  width: 100%;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background: rgba(157, 159, 162, 0.7); }
+  .stats .stats-overlay {
+    width: 100%;
+    float: left;
+    background-attachment: fixed;
+    padding: 50px 0; }
+  .stats .statsbar {
+    width: 100%; }
+  .stats .stat-one {
+    width: 25%;
+    float: left; }
+  .stats .stat-two {
+    width: 25%;
+    float: left; }
+  .stats .stat-three {
+    width: 25%;
+    float: left; }
+  .stats .stat-four {
+    width: 25%;
+    float: left; }
+  .stats .stat-number {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #FFF; }
+  .stats .stat-title {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #FFF; }
+
+/*----------  about us
+------------------------------------------------------------------------------*/
+.about-us {
+  text-align: center;
+  padding: 40px 0;
+  clear: both; }
+  .about-us span > a > img {
+    width: 150px;
+    height: 150px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #9d9fa2; }
+  .about-us p {
+    padding: 25px 0; }
+
+/*----------  what we do
+------------------------------------------------------------------------------*/
+.what-we-do {
+  text-align: center;
+  /* Common style */
+  /* Anchor will cover the whole item by default */
+  /* For some effects it will show as a button */ }
+  .what-we-do .grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    list-style: none;
+    text-align: center; }
+  .what-we-do .grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    max-width: 18%;
+    max-height: 18%;
+    width: 48%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer; }
+  .what-we-do .grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8; }
+  .what-we-do .grid figure figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .what-we-do .grid figure figcaption::before,
+  .what-we-do .grid figure figcaption::after {
+    pointer-events: none; }
+  .what-we-do .grid figure figcaption,
+  .what-we-do .grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .what-we-do .grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0; }
+  .what-we-do .grid figure h2 {
+    font-size: 35px;
+    word-spacing: -0.15em;
+    font-weight: 300; }
+  .what-we-do .grid figure h2 span {
+    font-weight: 800; }
+  .what-we-do .grid figure h2,
+  .what-we-do .grid figure p {
+    margin: 0; }
+  .what-we-do .grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%; }
+  .what-we-do figure.effect-lexi img {
+    margin: -10px 0 0 -10px;
+    max-width: none;
+    width: -webkit-calc(100% + 10px);
+    width: calc(100% + 10px);
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(10px, 10px, 0);
+    transform: translate3d(10px, 10px, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .what-we-do figure.effect-lexi figcaption::before,
+  .what-we-do figure.effect-lexi p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s; }
+  .what-we-do figure.effect-lexi figcaption::before {
+    position: absolute;
+    right: -100px;
+    bottom: -100px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 900px rgba(255, 255, 255, 0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%; }
+  .what-we-do figure.effect-lexi:hover img {
+    opacity: 0.6;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .what-we-do figure.effect-lexi h2 {
+    text-align: left;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(5px, 5px, 0);
+    transform: translate3d(5px, 5px, 0); }
+  .what-we-do figure.effect-lexi p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 1.5em 1.5em 0;
+    width: 140px;
+    text-align: right;
+    opacity: 0;
+    -webkit-transform: translate3d(20px, 20px, 0);
+    transform: translate3d(20px, 20px, 0); }
+  .what-we-do figure.effect-lexi:hover figcaption::before {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  .what-we-do figure.effect-lexi:hover h2,
+  .what-we-do figure.effect-lexi:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+/*----------  our work
+------------------------------------------------------------------------------*/
+.our-work {
+  text-align: center;
+  height: 500px;
+  background-color: aqua; }
+
+/*----------  our work
+------------------------------------------------------------------------------*/
+.clients {
+  text-align: center;
+  /********************************
+  * generic als elements styling
+  ********************************/
+  /**************************
+  * specific als elements
+  * styling for #lista1
+  **************************/ }
+  .clients .als-container {
+    position: relative;
+    width: 100%;
+    margin: 0px auto; }
+  .clients .als-viewport {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto; }
+  .clients .als-wrapper {
+    position: relative;
+    list-style: none; }
+  .clients .als-item {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    float: left; }
+  .clients .als-prev, .clients .als-next {
+    position: absolute;
+    cursor: pointer;
+    clear: both; }
+  .clients #lista1 {
+    margin: 60px auto 80px auto; }
+  .clients #lista1 .als-item {
+    margin: 0px 30px;
+    min-height: 152px;
+    min-width: 128px; }
+  .clients #lista1 .als-item img {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    margin-bottom: 8px; }
+  .clients #lista1 .als-prev, .clients #lista1 .als-next {
+    top: 58px;
+    width: 15px;
+    height: 22px; }
+  .clients #lista1 .als-prev {
+    left: 90px; }
+  .clients #lista1 .als-next {
+    right: 100px; }

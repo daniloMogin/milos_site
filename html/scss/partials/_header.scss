@@ -5,12 +5,15 @@
     .logo {
         height: 100px;
         width: 100px;
-        margin: 15px 0;
+        padding: 10px 0;
     }
     .show {
         display: block;
     }
     .none {
+        display: none;
+    }
+    .none-logo {
         display: none;
     }
     .hide-nav-btn {
@@ -23,43 +26,22 @@
         list-style: none;
         font-size: 14px;
         padding: 0 10px;
+        > a {
+            float: left;
+        }
         > li {
             display: inline-block;
             position: relative;
+            margin-top: 39px;
             > a {
                 color: black;
                 display: block;
-                padding: 10px 14px;
+                margin: 0 10px;
+                padding: 10px 0;
                 text-decoration: none;
                 &:hover {
                     border-bottom: 1px solid $white;
                     color: white;
-                }
-            }
-            > ul {
-                @include box-shadow(rgba(black, 0.5) 0 5px 15px);
-                @include border-radius(3px);
-                @include border-top-left-radius(0);
-                display: none;
-                position: absolute;
-                top: 100%;
-                list-style: none;
-                width: 15em;
-                padding: 10px 0;
-                > li > a {
-                    color: black;
-                    display: block;
-                    padding: 8px 20px;
-                    text-decoration: none;
-
-                    &:hover {
-                        background: #29a7f5;
-                        color: white;
-                    }
-                }
-                > li.separator {
-                    border-top: 1px solid #ddd;
-                    margin: 8px;
                 }
             }
             &.is-selected {
@@ -71,6 +53,13 @@
                     display: block;
                     z-index: 9999;
                 }
+            }
+        }
+        > span {
+            float: right;
+            margin-top: 45px;
+            > a {
+                margin-right: 15px;
             }
         }
     }
@@ -86,16 +75,28 @@
     @include breakpoint(tablet) {
     }
     @include breakpoint(phone) {
-        padding: 0;
-        padding-bottom: 20px;
         .mob-nav-on {
-            width: 40px;
-            height: 40px;
             position: absolute;
-            top: 56px;
-            right: 30px;
+            top: 53px;
+            right: 20px;
         }
-        .main-nav {
+        .mob-nav-off {
+            position: absolute;
+            top: 53px;
+            right: 20px;
+        }
+        .logo-mob-nav {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+            padding: 0 0 10px 10px;
+        }
+        .none-logo {
+            display: block;
+            padding: 10px 0 10px 10px;
+        }
+        .nav {
             display: none;
         }
         .hidden {
@@ -109,8 +110,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 5;
-            background: url("../../assets/img/content/doted-back.jpg");
+            z-index: 60;
             font-weight: 700;
             font-size: 15px;
             line-height: 20px;
@@ -118,41 +118,40 @@
             display: block;
             float: left;
             clear: both;
-            h2 {
-                padding: 30px 0;
+            background-color: $gray;
+
+            .sub-menu {
+                padding: 0 0;
             }
-            ul {
-                &:first-of-type {
-                    padding: 20px 20px;
-                }
-                padding: 0 20px;
-                &:nth-of-type(2) {
-                    border-top: 1px solid $gray;
-                    padding-top: 20px;
-                }
-                &:last-of-type {
-                    padding-bottom: 20px;
-                }
+            ul.mobile-links {
+                clear: both;
+                background-color: $gray;
                 li {
-                    padding: 5px 0;
+                    padding: 10px 0;
                     a {
+                        text-align: left;
                         color: $white;
+                        font-weight: 300;
+                        &:hover {
+                            color: $green;
+                        }
                     }
                 }
-            }
-            .mob-nav-off {
-                width: 40px;
-                height: 40px;
-                position: absolute;
-                top: 56px;
-                right: 30px;
+                span {
+                    > a {
+                        padding: 0 15px;
+                        line-height: 100px;
+                    }
+                }
             }
         }
         .none {
             display: none;
         }
         .show {
-            display: block;
+            display: none;
+            @include transition-duration(2s);
+            @include transition-timing-function(ease-in);
         }
     }
 }
