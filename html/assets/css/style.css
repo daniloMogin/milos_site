@@ -732,7 +732,7 @@ html[xmlns] .flexslider .slides {
 /*----------  partials
 ------------------------------------------------------------------------------*/
 .header {
-  background-color: #9d9fa2;
+  background-color: #DDDAD6;
   text-align: center;
   position: relative; }
   .header .logo {
@@ -785,7 +785,7 @@ html[xmlns] .flexslider .slides {
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #9d9fa2; }
+    background-color: #DDDAD6; }
   @media only screen and (min-width: 50px) and (max-width: 767px) {
     .header .mob-nav-on {
       position: absolute;
@@ -854,8 +854,8 @@ html[xmlns] .flexslider .slides {
       transition-timing-function: ease-in; } }
 
 .footer {
-  background-color: #9d9fa2;
-  clear: both; }
+  clear: both;
+  background-color: #323232; }
   .footer .footer-top {
     background-color: #fff; }
     .footer .footer-top .social-icons {
@@ -1079,7 +1079,7 @@ html[xmlns] .flexslider .slides {
 ------------------------------------------------------------------------------*/
 .what-we-do {
   text-align: center;
-  background-color: #DDDAD6;
+  background: rgba(157, 159, 162, 0.7);
   padding-bottom: 40px;
   /* Common style */
   /* Anchor will cover the whole item by default */
@@ -1209,14 +1209,14 @@ html[xmlns] .flexslider .slides {
 .our-work {
   text-align: center;
   height: 500px;
-  background-color: #00a8a1;
   padding-bottom: 40px; }
 
 /*----------  clients
 ------------------------------------------------------------------------------*/
 .clients {
   text-align: center;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  background: rgba(157, 159, 162, 0.7); }
   .clients .als-container {
     position: relative;
     width: 100%;
@@ -1279,6 +1279,40 @@ html[xmlns] .flexslider .slides {
     .contact .personal-info .contact-form {
       float: right;
       width: 50%; }
-    .contact .personal-info #map {
-      width: 100%;
-      height: 600px; }
+      .contact .personal-info .contact-form label {
+        font-size: 25px;
+        font-weight: 300; }
+      .contact .personal-info .contact-form textarea,
+      .contact .personal-info .contact-form input {
+        width: 300px;
+        height: 20px;
+        transform: translateY(-5px); }
+      .contact .personal-info .contact-form textarea {
+        height: 80px;
+        transform: translateY(8px); }
+      .contact .personal-info .contact-form button {
+        position: relative;
+        vertical-align: top;
+        width: 100px;
+        padding: 0;
+        font-size: 22px;
+        line-height: 50px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        background: #00a8a1;
+        border: 0;
+        border-bottom: 2px solid #e2b607;
+        cursor: pointer;
+        -webkit-box-shadow: inset 0 -2px #e2b607;
+        box-shadow: inset 0 -2px #e2b607; }
+        .contact .personal-info .contact-form button:hover {
+          top: 1px;
+          outline: none;
+          -webkit-box-shadow: none;
+          box-shadow: none; }
+        .contact .personal-info .contact-form button:active {
+          top: 1px;
+          outline: none;
+          -webkit-box-shadow: none;
+          box-shadow: none; }

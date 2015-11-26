@@ -1,5 +1,5 @@
 .header {
-    background-color: $gray;
+    background-color: $gray-light;
     text-align: center;
     position: relative;
     .logo {
@@ -69,7 +69,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        background-color: $gray;
+        background-color: $gray-light;
     }
 
     @include breakpoint(tablet) {

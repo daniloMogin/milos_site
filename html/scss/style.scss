@@ -247,7 +247,7 @@
 ------------------------------------------------------------------------------*/
 .what-we-do {
     text-align: center;
-    background-color: $gray-light;
+    background: rgba($gray, 0.7);
     padding-bottom: 40px;
     .grid {
         position: relative;
@@ -417,7 +417,6 @@
 .our-work {
     text-align: center;
     height: 500px;
-    background-color: $green;
     padding-bottom: 40px;
 }
 
@@ -426,6 +425,7 @@
 .clients {
     text-align: center;
     padding-bottom: 40px;
+    background: rgba($gray, 0.7);
     .als-container {
         position: relative;
         width: 100%;
@@ -513,10 +513,49 @@
         .contact-form {
             float: right;
             width: 50%;
-        }
-        #map {
-            width: 100%;
-            height: 600px;
+            label {
+                font-size: 25px;
+                font-weight: 300;
+            }
+            textarea,
+            input {
+                width: 300px;
+                height: 20px;
+                transform: translateY(-5px);
+            }
+            textarea {
+                height: 80px;
+                transform: translateY(8px);
+            }
+            button {
+                position: relative;
+                vertical-align: top;
+                width: 100px;
+                padding: 0;
+                font-size: 22px;
+                line-height: 50px;
+                color: $white;
+                text-align: center;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+                background: $green;
+                border: 0;
+                border-bottom: 2px solid #e2b607;
+                cursor: pointer;
+                -webkit-box-shadow: inset 0 -2px #e2b607;
+                box-shadow: inset 0 -2px #e2b607;
+                &:hover {
+                    top: 1px;
+                    outline: none;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+                &:active {
+                    top: 1px;
+                    outline: none;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+            }
         }
     }
 }
