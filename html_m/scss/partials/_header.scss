@@ -1,0 +1,153 @@
+.header {
+    background-color: $gray;
+    text-align: center;
+    position: relative;
+    .logo {
+        height: 100px;
+        width: 100px;
+        padding: 10px 0;
+    }
+    .show {
+        display: block;
+    }
+    .none {
+        display: none;
+    }
+    .none-logo {
+        display: none;
+    }
+    .hide-nav-btn {
+        display: none;
+    }
+    .mobile-nav {
+        display: none;
+    }
+    ul.menubar {
+        list-style: none;
+        font-size: 14px;
+        padding: 0 10px;
+        > a {
+            float: left;
+        }
+        > li {
+            display: inline-block;
+            position: relative;
+            margin-top: 39px;
+            > a {
+                color: $black;
+                display: block;
+                margin: 0 10px;
+                padding: 10px 0;
+                text-decoration: none;
+                @include transition-duration(.8s);
+                @include transition-timing-function(ease-out);
+                &:hover {
+                    color: $gray-light;
+                }
+            }
+            &.is-selected {
+                > a {
+                    color: $gray-light;
+                }
+            }
+        }
+        > span {
+            float: right;
+            margin-top: 45px;
+            > a {
+                margin-right: 15px;
+            }
+        }
+    }
+    .fix-nav {
+        z-index: 9999;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: $gray;
+    }
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        .mob-nav-on {
+            position: absolute;
+            top: 53px;
+            right: 20px;
+        }
+        .mob-nav-off {
+            position: absolute;
+            top: 53px;
+            right: 20px;
+        }
+        .logo-mob-nav {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+            padding: 0 0 10px 10px;
+        }
+        .none-logo {
+            display: block;
+            padding: 10px 0 10px 10px;
+        }
+        .nav {
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .hide-nav-btn {
+            display: block;
+            float: right;
+        }
+        .mobile-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 60;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            width: 100%;
+            display: block;
+            float: left;
+            clear: both;
+            background-color: $gray;
+
+            .sub-menu {
+                padding: 0 0;
+            }
+            ul.mobile-links {
+                clear: both;
+                background-color: $gray;
+                li {
+                    padding: 10px 0;
+                    a {
+                        text-align: left;
+                        color: $white;
+                        font-weight: 300;
+                        &:hover {
+                            color: $green;
+                        }
+                    }
+                }
+                span {
+                    > a {
+                        padding: 0 15px;
+                        line-height: 100px;
+                    }
+                }
+            }
+        }
+        .none {
+            display: none;
+        }
+        .show {
+            display: none;
+            @include transition-duration(2s);
+            @include transition-timing-function(ease-in);
+        }
+    }
+}

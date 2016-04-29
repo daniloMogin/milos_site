@@ -1,0 +1,36 @@
+/*---------- variables
+-----------------------------------------------------------*/
+// Font
+$font-main: 'Open Sans', sans-serif !default;
+
+// Sprites
+$icons: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
+
+// Colors
+$black: #000 !default;
+$white: #fff !default;
+$gray: #9d9fa2 !default;
+$gray-light: #DDDAD6 !default;
+$gray-dark: #323232 !default;
+$blue: #A6D8DE !default;
+$blue-hover: #6EC0C9 !default;
+
+$blue-face: #3b5998 !default;
+
+$yellow: #F9F1B5 !default;
+$silver: #D9D9D9 !default;
+$green: #00a8a1 !default;
+
+// Prefix for Hover class names
+$nameSpace: 'hvr' !default;
+
+// Durations
+$fastDuration: .1s !default;
+$mediumDuration: .3s !default;
+$slowDuration: .5s !default;
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default; 

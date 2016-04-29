@@ -1,0 +1,598 @@
+/*----------  config
+------------------------------------------------------------------------------*/
+@import "compass";
+@import "config/reset";
+@import "config/variables";
+@import "config/typography";
+
+/*----------  helpers
+------------------------------------------------------------------------------*/
+@import "helpers/mixins";
+
+/*----------  layout
+------------------------------------------------------------------------------*/
+@import "layout/layout";
+@import "layout/icons";
+@import "layout/buttons";
+
+/*----------  libs
+------------------------------------------------------------------------------*/
+@import "libs/flexslider";
+@import "libs/tooltip-box";
+
+/*----------  partials
+------------------------------------------------------------------------------*/
+@import "partials/header";
+@import "partials/footer";
+
+/*----------  slider
+------------------------------------------------------------------------------*/
+.slider {
+    clear: both;
+    text-align: center;
+    min-height: 100%;
+    .overlay {
+        max-width: 980px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 15px 0;
+        z-index: 999;
+        margin: 0 auto;
+    }
+    .flexslider {
+        margin: 0;
+        border: 0;
+    }
+    .flex-direction-nav {
+        display: none !important;
+    }
+    .flex-caption{
+        left:0 !important;
+    }
+    .flex-control-nav {
+        bottom: 50px;
+    }
+    .flex-control-paging li a {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .flex-control-paging li a:hover {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    .flex-control-paging li a.flex-active {
+        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .slides li {
+        position: relative;
+        .flex-caption {
+            position: absolute;
+            top: 0;
+            padding: 2%;
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+            font-size: 14px;
+            line-height: 18px;
+            .gray-bck {
+                background: rgba($green, 0.5);
+                @include border-radius(10px);
+            }
+            h2 {
+                color: $white;   
+                padding: 15px 0;
+            }
+            p {
+                padding: 15px 15px;
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+        .slides li {
+            max-height: 339px;
+        }
+        .flex-control-nav {
+            bottom: 40px;
+        }
+        .flex-caption {
+            h2 {
+                font-size: 30px;
+                line-height: 40px;
+                margin: 48px 0 3px 0;
+            }
+            .slider-caption-wrap {
+                padding-top: 18px;
+                i {
+                    margin: 10px 34px 0 35px;
+                }
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    padding-top: 3px;
+                }
+                .cite {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+                .right {
+                    margin: 10px 17px 0 30px;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        .overlay {
+            padding: 1px 0 0 21px;
+        }
+        .show {
+            display: none;
+        }
+        .hide {
+            display: block;
+            float: left;
+            padding-left: 5px;
+        }
+        .slides li {
+            max-height: 344px;
+        }
+        .flex-control-nav {
+            bottom: 30px;
+            left: 15px;
+            text-align: left;
+            width: 50%;
+        }
+        .flex-caption {
+            h2 {
+                font-size: 20px;
+                text-align: left;
+                border: 0;
+                margin: 0;
+            }
+            .slider-caption-wrap {
+                padding: 0;
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-align: left;
+                    clear: both;
+                    padding-top: 7px;
+                }
+                .cite {
+                    font-size: 15px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/*----------  stats
+------------------------------------------------------------------------------*/
+.stats {
+    width: 100%;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background: rgba($gray, 0.7);
+    .stats-overlay {
+        width: 100%;
+        float: left;
+        background-attachment: fixed;
+        padding: 50px 0;
+    }
+    .statsbar { 
+        width: 100%;
+    }
+    .stat-one { 
+        width: 25%;
+        float:left;
+    }
+    .stat-two { 
+        width: 25%;
+        float:left;
+    }
+    .stat-three { 
+        width: 25%;
+        float:left;
+    }
+    .stat-four { 
+        width: 25%;
+        float:left;
+    }
+    .stat-number { 
+        width: 100%;
+        float:left;
+        text-align:center;
+        color:#FFF;
+        font-size: 60px;
+        font-weight: 100;
+        text-transform: uppercase;
+        color:#FFF;
+    }
+    .stat-title { 
+        width: 100%;
+        float:left;
+        text-align:center;
+        color:#FFF;
+        font-size: 14px;
+        font-weight: 100;
+        text-transform: uppercase;
+        color:#FFF;
+    }
+}
+
+/*----------  about us
+------------------------------------------------------------------------------*/
+.about-us {
+    text-align: center;
+    padding-bottom: 40px;
+    clear: both;
+    span {
+        > a {
+            > img {
+                width: 150px;
+                height: 150px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid $gray;
+            }
+        }
+    }
+    p {
+        padding: 25px 0;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/*----------  what we do
+------------------------------------------------------------------------------*/
+.what-we-do {
+    text-align: center;
+    background: rgba($gray, 0.7);
+    padding-bottom: 40px;
+    .grid {
+        position: relative;
+        clear: both;
+        margin: 0 auto;
+        padding: 1em 0 4em;
+        list-style: none;
+        text-align: center;
+    }
+
+    /* Common style */
+    .grid figure {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        max-width: 18%;
+        max-height: 18%;
+        //        min-width: 250px;
+        //        min-height: 250px;
+        width: 48%;
+        height: auto;
+        background: #3085a3;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .grid figure img {
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        opacity: 0.8;
+    }
+
+    .grid figure figcaption {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .grid figure figcaption::before,
+    .grid figure figcaption::after {
+        pointer-events: none;
+    }
+
+    .grid figure figcaption,
+    .grid figure figcaption > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Anchor will cover the whole item by default */
+    /* For some effects it will show as a button */
+    .grid figure figcaption > a {
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+    }
+
+    .grid figure h2 {
+        font-size: 35px;
+        word-spacing: -0.15em;
+        font-weight: 300;
+    }
+
+    .grid figure h2 span {
+        font-weight: 800;
+    }
+
+    .grid figure h2,
+    .grid figure p {
+        margin: 0;
+    }
+
+    .grid figure p {
+        letter-spacing: 1px;
+        font-size: 68.5%;
+    }
+
+    figure.effect-lexi img {
+        margin: -10px 0 0 -10px;
+        max-width: none;
+        width: -webkit-calc(100% + 10px);
+        width: calc(100% + 10px);
+        opacity: 0.9;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(10px,10px,0);
+        transform: translate3d(10px,10px,0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    figure.effect-lexi figcaption::before,
+    figure.effect-lexi p {
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+    }
+
+    figure.effect-lexi figcaption::before {
+        position: absolute;
+        right: -100px;
+        bottom: -100px;
+        width: 300px;
+        height: 300px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 900px rgba(255,255,255,0.2);
+        content: '';
+        opacity: 0;
+        -webkit-transform: scale3d(0.5,0.5,1);
+        transform: scale3d(0.5,0.5,1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    figure.effect-lexi:hover img {
+        opacity: 0.6;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    figure.effect-lexi h2 {
+        text-align: left;
+        -webkit-transition: -webkit-transform 0.35s;
+        transition: transform 0.35s;
+        -webkit-transform: translate3d(5px,5px,0);
+        transform: translate3d(5px,5px,0);
+    }
+
+    figure.effect-lexi p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0 1.5em 1.5em 0;
+        width: 140px;
+        text-align: right;
+        opacity: 0;
+        -webkit-transform: translate3d(20px,20px,0);
+        transform: translate3d(20px,20px,0);
+    }
+
+    figure.effect-lexi:hover figcaption::before {
+        opacity: 1;
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+
+    figure.effect-lexi:hover h2,
+    figure.effect-lexi:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+/*----------  our work
+------------------------------------------------------------------------------*/
+.our-work {
+    text-align: center;
+    height: 500px;
+    padding-bottom: 40px;
+}
+
+/*----------  clients
+------------------------------------------------------------------------------*/
+.clients {
+    text-align: center;
+    padding-bottom: 40px;
+    background: rgba($gray, 0.7);
+    .als-container {
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .als-viewport {
+        position: relative;
+        overflow: hidden;
+        margin: 0px auto;
+    }
+
+    .als-wrapper {
+        position: relative;
+        list-style: none;
+    }
+
+    .als-item {
+        position: relative;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+    }
+
+    .als-prev, .als-next {
+        position: absolute;
+        cursor: pointer;
+        clear: both;
+    }
+
+    #lista1 {
+        margin: 60px auto 80px auto;
+    }
+
+    #lista1 .als-item {
+        margin: 0px 30px;
+        min-height: 152px;
+        min-width: 128px;
+    }
+
+    #lista1 .als-item img {
+        position: relative;
+        display: block;
+        vertical-align: middle;
+        margin-bottom: 8px;
+    }
+
+    #lista1 .als-prev, #lista1 .als-next {
+        top: 58px;
+        width: 15px;
+        height: 22px;
+    }
+
+    #lista1 .als-prev {
+        left: 90px;
+    }
+
+    #lista1 .als-next {
+        right: 100px;
+    }
+}
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.news {
+    text-align: center;
+    min-height: 500px;
+}
+
+/*----------  News
+------------------------------------------------------------------------------*/
+.contact {
+    text-align: center;
+    background: rgba($gray, 0.7);
+    padding-bottom: 40px;
+    .personal-info {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        .main-info {
+            display: block;
+            max-width: 500px;
+            text-align: left;
+            margin: 0 auto;
+//            background-color: antiquewhite;
+            margin-bottom: 30px;
+            p {
+                font-size: 20px;
+            }
+        }
+        .contact-form {
+            display: block;
+            max-width: 500px;
+            text-align: left;
+//            background-color: aliceblue;
+            margin: 0 auto;
+            clear: both;
+            label {
+                font-weight: 300;
+                font-size: 20px;
+                display: block;
+            }
+            textarea,
+            input {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                border-bottom: 3px solid #c9c9c9;
+                background-color: $silver;
+                transition: border .5s;
+                margin-bottom: 20px;
+                &:focus {
+                    border-bottom: 3px solid #969696;    
+                }
+            }
+            textarea {
+                height: 80px;
+                transform: translateY(8px);
+            }
+            #submit {
+                width: 100%;
+                line-height: 50px;
+                background-color: $gray-light;
+                color: $black;
+                border: 0;
+                border-bottom: 3px solid $gray;
+                transition: all .8s;
+                &:hover {
+                    background-color: $gray;
+                    border-bottom: 3px solid $gray-light;
+                    color: $white;
+                }
+            }
+            form input[type="text"].error, form textarea.error {
+                background: #e6e6e6;
+                border-color: #c0392b;
+            }
+            fieldset {
+                border: 0px;
+                margin: 0;
+                padding: 0;
+            }
+            .required {
+                color: #e9266d;
+            }
+            #success, #error {
+                display: none;
+            }
+            #success span, #error span {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width:80%;
+            }
+            #success span p, #error span p {
+                margin-top: 6em;
+            }
+            #success span p {
+                color: #9bd32d;
+            }
+            #error span p {
+                color: #c0392b;
+            }
+        }
+    }
+}
