@@ -1,6 +1,6 @@
 .footer {
     clear: both;
-    background-color: $gray-dark;
+    background-color: $gray;
     .footer-top {
         background-color: $white;
         .social-icons {
@@ -27,8 +27,8 @@
     }
     .footer-bottom {
         padding: 25px 0;
-        border-top: 1px solid $gray-light;
-        color: $gray-light;
+        border-top: 1px solid $gray;
+        color: $white;
         p {
             float: left;
             font-weight: 300;
@@ -40,13 +40,13 @@
             li {
                 display: inline-block;
                 padding: 0 10px;
-                border-right: 1px solid $gray-light;
+                border-right: 1px solid $gray;
                 &:last-of-type {
                     border: 0;
                 }
                 > a {
                     @include transition(all .25s ease-out); 
-                    color: $gray-light;
+                    color: $gray; 
                     font-weight: 300;
                     &:hover {
                         color: $gray;

@@ -1,5 +1,5 @@
 .header {
-    background-color: #F5BC17;
+    background-color: $green;
     text-align: center;
     position: relative;
     .logo {
@@ -43,19 +43,23 @@
                 @include transition-duration(.8s);
                 @include transition-timing-function(ease-out);
                 &:hover {
-                    color: $gray-light;
+                    color: $yellow;
                 }
             }
             &.is-selected {
                 > a {
-                    color: $gray-light;
+                    color: $yellow;
                 }
             }
         }
         > .social-icons {
             float: right;
             margin-top: 22px;
-            .social-icon-wrap {
+            .social-icon-wrap-f,
+            .social-icon-wrap-i,
+            .social-icon-wrap-s,
+            .social-icon-wrap-v,
+            .social-icon-wrap-l {
                 width: 35px;
                 height: 35px;
                 border-radius: 50%;
@@ -64,13 +68,67 @@
                 float: left;
                 background-color: $white;
                 margin-right: 5px;
+                text-align: center;
+                @include transition(all .5s ease-out);
                 > a {
                     position: absolute;
-                    top: 4px;
-                    left: 2px;
+                    top: 6px;
+                    left: 0;
                     right: 0;
+                    .soc-last {
+                        position: absolute;
+                        top: 1px;
+                        left: 8px;
+                        right: 0;
+                    }
+                }
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $white;
+                }
+                
+            }
+            
+            .social-icon-wrap-f {
+                &:hover {
+                    i {
+                        @include sprite(ico-facebook-hover);
+                    }
                 }
             }
+            
+            .social-icon-wrap-i {
+                &:hover {
+                    i {
+                        @include sprite(ico-instagram-hover);
+                    }
+                }
+            }
+            
+            .social-icon-wrap-s {
+                &:hover {
+                    i {
+                        @include sprite(ico-snapchat-hover);
+                    }
+                }
+            }
+            
+            .social-icon-wrap-v {
+                &:hover {
+                    i {
+                        @include sprite(ico-viber-hover);
+                    }
+                }
+            }
+            
+            .social-icon-wrap-l {
+                &:hover {
+                    i {
+                        @include sprite(ico-linkedIn-hover);
+                    }
+                }
+            }
+            
         }
     }
     .fix-nav {
@@ -79,7 +137,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        background-color: #F5BC17;
+        background-color: $green;
     }
 
     @include breakpoint(tablet) {

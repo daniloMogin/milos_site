@@ -11,30 +11,30 @@
 
     &.small {
         padding: 13px 20px;
-        background-color: $blue;
+        background-color: $green;
         &:hover {
-            background-color: $blue-hover;
+            background-color: darken($color: $green, $amount: 5%);
         }
     }
 
     &.big {
         padding: 18px 35px;
-        background-color: $blue;
+        background-color: $green;
         &:hover {
-            background-color: $blue-hover;
+            background-color: darken($color: $green, $amount: 5%);
         }
     }
 
     &.sm {
         padding: 12px 53px;
-        background-color: $blue;
+        background-color: $green;
         &:hover {
-            background-color: $blue-hover;
+            background-color: darken($color: $green, $amount: 5%);
         }
     }
 
     &.med {
         padding: 12px 53px;
-        background-color: $blue;
+        background-color: darken($color: $green, $amount: 5%);
     }
 }
