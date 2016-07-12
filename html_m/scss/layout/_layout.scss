@@ -11,8 +11,48 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    .tp-container {
+        opacity: 0;
+        position: fixed;
+        right: 17px;
+        bottom: 14px;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+    }
+
+    .tp-show {
+        opacity: 1;
+        background-color: rgba($black, .7);
+        @include border-radius(4px);
+        @include transition-duration($mediumDuration);
+        overflow: hidden;
+        i {
+            position: absolute;
+            top: -2px;
+            left: 7px;
+            color: $black;
+        }
+        &:hover {
+            background-color: rgba($black, .7);
+            i {
+                color: $white;
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        .tp-container {
+            right: 17px;
+            bottom: 107px;
+        }
+    }
+}
+
 .main-grid {
-    max-width: 100%;
+    max-width: 907px;
     min-width: 260px;
     margin: 0 auto;
     position: relative;
@@ -21,35 +61,19 @@ html {
         display: table;
         clear: both;
     }
-    .stats-col {
-        box-sizing: border-box;
-        width: 24%;
+    .grid-2 {
+        width: 49%;
         float: left;
-        margin-right: 2%;
-        padding: 5px 5px;
-        text-align: center;
-        background-color: aqua;
-        position: relative;
-        &:last-of-type {
-            margin-right: 0;
-        }
     }
-    .what-we-do-col {
-        box-sizing: border-box;
-        width: 19%;
+    .grid-3 {
+        width: 33.33%;
         float: left;
-        margin-right: 1.2%;
-        text-align: center;
-        position: relative;
-        cursor: pointer;
-        &:last-of-type {
-            margin-right: 0;
-        }
+    }
+    @include breakpoint(tablet-big) {
     }
     @include breakpoint(tablet) {
     }
     @include breakpoint(phone) {
-        padding: 0 20px;
     }
 }
 

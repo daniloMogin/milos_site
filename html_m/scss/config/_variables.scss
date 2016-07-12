@@ -1,7 +1,26 @@
 /*---------- variables
 -----------------------------------------------------------*/
 // Font
-$font-main: 'Open Sans', sans-serif !default;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: local('☺'), url('../fonts/montserrat-regular-webfont.woff') format('woff'), 
+        url('../fonts/Montserrat-Regular.ttf') format('truetype'), 
+        url('../fonts/Montserrat-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: local('☺'), url('../fonts/montserrat-bold-webfont.woff') format('woff'), 
+        url('../fonts/Montserrat-Bold.ttf') format('truetype'), 
+        url('../fonts/Montserrat-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: bold;
+}
+// Font
+$font-main: 'Montserrat', sans-serif !default;
 
 // Sprites
 $icons: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
@@ -12,7 +31,10 @@ $white: #fff !default;
 $gray: #9FA0A0 !default;
 $red: #CE5250 !default;
 $yellow: #F5BC17 !default;
-$green: #00A8A1 !default;
+$yellow-dark: #A87F09 !default;
+$green: #00A7A4 !default;
+$green-dark: #015A56 !default;
+$violet-dark: #414042 !default;
 
 
 // Prefix for Hover class names

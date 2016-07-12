@@ -2,22 +2,50 @@
 ------------------------------------------------------------------------------*/
 .ico {
     display: inline-block;
+    width: 24.185197px;
+    // @include transition-duration(.5s);
     &:last-of-type {
         padding: 0;
     }
     &.facebook {
         @include sprite(ico-facebook);
+        &:hover {
+            @include sprite(ico-facebook-hover);
+        }
+    }&.facebook-yellow {
+        @include sprite(ico-facebook-yellow);
     }
     &.instagram {
         @include sprite(ico-instagram);
+        &:hover {
+            @include sprite(ico-instagram-hover);
+        }
+    }
+    &.instagram-yellow {
+        @include sprite(ico-instagram-yellow);
     }
     &.linkedIn {
         @include sprite(ico-linkedIn);
+        &:hover {
+            @include sprite(ico-linkedIn-hover);
+        }
+    }
+    &.linkedIn-yellow {
+        @include sprite(ico-linkedIn-yellow);
     }
     &.snapchat {
         @include sprite(ico-snapchat);
+        &:hover {
+            @include sprite(ico-snapchat-hover);
+        }
     }
     &.viber {
         @include sprite(ico-viber);
+        &:hover {
+            @include sprite(ico-viber-hover);
+        }
+    }
+    &.viber-yellow {
+        @include sprite(ico-viber-yellow);
     }
 }

@@ -26,8 +26,8 @@
 /*----------  hero
 ------------------------------------------------------------------------------*/
 .hero {
-    height: 680px;
-    background: url('../../assets/img/content/slider-banner2.jpg');
+    height: 576px;
+    background: url('../../assets/img/content/banner1.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     margin: 0 auto;
@@ -36,50 +36,66 @@
         height: auto;
     }
     .hero-wrapper,img {
-        max-height: 485px;
+        max-height: 485px; 
     }
 }
 /*----------  stats
 ------------------------------------------------------------------------------*/
 .stats {
     width: 100%;
-    float: left;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background: $red;
-    .stats-overlay {
-        width: 100%;
-        float: left;
-        background-attachment: fixed;
+    background-color: $red;
+    color: $white;
+    .statsbar {
+        .stat {
+            width: 25%;
+            float: left;
+            padding-bottom: 16px;
+            font-size: 60px;
+            font-weight: 300;
+            .stat-number {
+                width: 100%;
+                float: left;
+                text-align: center;
+                color: $white;
+                font-size: 23.25px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .stat-title {
+                width: 100%;
+                float: left;
+                text-align: center;
+                color: $white;
+                font-size: 9px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
     }
-    .statsbar { 
-        width: 100%;
+    @include breakpoint(tablet) {
+        .statsbar {
+            .stat {
+                .stat-number {
+                    font-size: 19px;
+                }
+                .stat-title {
+                    font-size: 7px;
+                }
+            }
+        }
     }
-    .stat { 
-        width: 25%;
-        float: left;
-        transform: translateY(-9px);
-    }
-    .stat-number { 
-        width: 100%;
-        float:left;
-        text-align:center;
-        color:#FFF;
-        font-size: 60px;
-        font-weight: 100;
-        text-transform: uppercase;
-        color:#FFF;
-    }
-    .stat-title { 
-        width: 100%;
-        float:left;
-        text-align:center;
-        color:#FFF;
-        font-size: 14px;
-        font-weight: 100;
-        text-transform: uppercase;
-        color:#FFF;
+    @include breakpoint(phone) {
+        .statsbar {
+            .stat {
+                padding-bottom: 7px;
+                .stat-number {
+                    font-size: 16px;
+                }
+                .stat-title {
+                    font-size: 5.5px;
+                }
+            }
+        }
     }
 }
 
@@ -87,19 +103,26 @@
 ------------------------------------------------------------------------------*/
 .about-us {
     text-align: center;
-    padding-bottom: 40px;
-    clear: both;
-    background-color: $white;
-    background: url('../../assets/img/content/napustena-zgrada-z.jpg');
+    background: url('../../assets/img/content/About-us.jpg');
     background-repeat: no-repeat;
-    background-position: cover; 
+    background-size: cover;
+    width: 100%;
     h2 {
         text-transform: uppercase;
+        color: $white;
     }
     p {
-        padding: 25px 0;
-        width: 50%;
+        padding-bottom: 15px;
         margin: 0 auto;
+        color: $white;
+        width: 80%;
+        .text-decor {
+            color: $yellow;
+        }
+    }
+    .we-roar-digital {
+        width: 80%;
+        padding: 33px 0 115px 0;
     }
 }
 
@@ -107,23 +130,38 @@
 ------------------------------------------------------------------------------*/
 .what-we-do {
     text-align: center;
-    background: $yellow;
-    padding-bottom: 40px;
+    background: $white;
+    h2 {
+        color: $gray;
+    }
     p {
         width: 56%;
         margin: 0 auto;
         padding-bottom: 25px;
+        color: $gray;
     }
     .wwd-wrapper {
         margin: 0 auto;
-        width: 70%;
+        overflow: hidden;
+        &:last-of-type {
+            padding-bottom: 5em;
+        }
         .wwd-section {
             position: relative;
-            width: 49%;
+            width: 50%;
             background-color: $white;
             float: left;
+            cursor: pointer;
+            &:nth-of-type(even) {
+                margin: 0;
+            }
             img {
                 width: 100%;
+            }
+            a {
+                font-size: 15.29px;
+                text-transform: uppercase;
+                color: $gray;
             }
         }
     }
@@ -135,34 +173,50 @@
     text-align: center;
     padding-bottom: 40px;
     margin: 0 auto;
+    background-color: $yellow;
+    h2 {
+        color: $yellow-dark;
+    }
     .ot-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         overflow: hidden;
         .ot-box {
             float: left;
-            width: 25%;
+            width: 28.5%;
             text-align: left;
-            &:last-of-type {
+            margin-right: 7.25%;
+            color: $yellow-dark;
+            &:last-of-type { 
                 margin: 0;
             }
             img {
-                margin-bottom: 30px;
+                margin-bottom: 22.4px;
             }
-            h4 {
+            small {
+                font-size: 10px;
+                font-weight: 700;
+            }
+            span {
                 padding: 0;
-                margin: 30px 0;
+                margin: 15.8px 0;
                 line-height: 0;
+                display: block;
+                p {
+                    font-size: 18px;
+                    font-weight: 700;
+                    padding-bottom: 7.3px;
+                    &:last-of-type {
+                        padding-bottom: 0;
+                    }
+                }
             }
             p {
                 font-size: 13.5px;
                 line-height: 20px;
-                padding-bottom: 20px;
+                padding-bottom: 25px;
             }
             .ot-social {
-                width: 103px;
-                border-bottom: 1px dashed $black;
-                padding: 0 0 10px 11px;
                 .ot-soc-ico-f,
                 .ot-soc-ico-i,
                 .ot-soc-ico-s {
@@ -171,44 +225,50 @@
                         margin: 0;
                     }
                 }
-                .ot-soc-ico-f {
-                    &:hover {
-                        i {
-                            @include sprite(ico-facebook-hover);
-                        }
-                    }
+            }
+        }
+    }
+    @include breakpoint(tablet-big) {
+    }
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        .ot-wrapper {
+            .ot-box {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 25px;
+                img {
+                    width: 55%;
+                    margin: 0;
                 }
-                .ot-soc-ico-i {
-                    &:hover {
-                        i {
-                            @include sprite(ico-instagram-hover);
-                        }
-                    }
-                }
-                .ot-soc-ico-s {
-                    &:hover {
-                        i {
-                            @include sprite(ico-viber-hover);
-                        }
-                    }
+                p {
+                    width: 80%;
+                    margin: 0 auto;
+                    padding-bottom: 10px;
                 }
             }
         }
     }
-}
+} 
 
 /*----------  clients
 ------------------------------------------------------------------------------*/
 .clients,
 .partners {
     text-align: center;
-    padding-bottom: 40px;
-    background: rgba($gray, 0.7);
+    background: $green;
+    p {
+        color: $green-dark;
+        width: 70%;
+        margin: 0 auto;
+    }
     .rotator-wrapper {
         display: block;
-        width: 700px;
-        margin: 100px auto;
+        width: 400px;
+        margin: 0 auto;
         overflow: hidden;
+        padding-bottom: 40px;
         ul {
             display: block;
             list-style: none;
@@ -245,12 +305,9 @@
 /*----------  partners
 ------------------------------------------------------------------------------*/
 .partners {
-    background: url('../../assets/img/content/partners-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    h2 {
-        font-weight: 500;
-        color: $white;
+    background-color: $green-dark;
+    p {
+        color: $green;
     }
 }
 
@@ -259,100 +316,147 @@
 .news {
     text-align: center;
     min-height: 500px;
+    h2 {
+        color: $gray;
+    }
+    p {
+        color: $gray;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .news-wrapper {
+        overflow: hidden;
+        padding-bottom: 106px;
+        .grid-3 {
+            text-align: left;
+            height: 257px;
+            background: url('../../assets/img/content/news.jpg');
+            background-repeat: no-repeat;
+            background-position: cover;
+            position: relative;
+            .green-top,
+            .green-d-top,
+            .yellow-top,
+            .gray-top,
+            .red-top {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                p {
+                    font-size: 24.31px;
+                    color: $white;
+                }
+                small {
+                    font-size: 15px;
+                    color: $white;
+                }
+                .text-wrapper {
+                    padding: 60px 35px;
+                }
+            }
+            .green-top {
+                background-color: rgba($green, 0.7);
+            }
+            .green-d-top {
+                background-color: rgba($green-dark, 0.7);
+            }
+            .yellow-top{
+                background-color: rgba($yellow, 0.7);
+            }
+            .gray-top {
+                background-color: rgba($violet-dark, 0.7);
+            }
+            .red-top {
+                background-color: rgba($red, 0.7);
+            }
+        }
+    }
+    @include breakpoint(tablet-big) {
+    }
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        .news-wrapper {
+            padding-bottom: 0;
+            .grid-3 {
+                width: 100%;
+                background-size: 100% 100%;
+            }
+        }
+    }
 }
 
 /*----------  News
 ------------------------------------------------------------------------------*/
 .contact {
     text-align: center;
-    background: $gray;
     padding-bottom: 40px;
-    .personal-info {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 1200px;
-        overflow: hidden;
-        .main-info {
-            display: block;
-            max-width: 49%;
-            text-align: left;
-            margin: 0 30px 0 0;
-            float: left;
-            p {
-                font-size: 20px;
+    width: 100%;
+    background: linear-gradient(to right, $green 50%, $green-dark 50%);
+    overflow: hidden;
+    .grid-2 {
+        width: 50%;
+        float: left;
+        text-align: right; 
+        .contact-wrapper {
+            padding-right: 14%;
+            overflow: hidden;
+            .details-wrapper {
+                float: right;
+                text-align: left;
+                padding: 50px 0;
+                h2 {
+                    padding: 0;
+                }
+                p {
+                    color: $white;
+                    padding: 0;
+                }
             }
         }
-        .contact-form {
-            display: block;
-            max-width: 49%;
-            text-align: left;
+        .email-wrapper {
+            overflow: hidden;
+            padding: 16% 0 0 14%;
             float: left;
-            label {
-                font-weight: 300;
-                font-size: 20px;
-                display: block;
-            }
-            textarea,
-            input {
+            form {
                 width: 100%;
-                padding: 5px;
-                border: none;
-                border-bottom: 3px solid $red;
-                background-color: $gray;
-                transition: border .5s;
-                margin-bottom: 20px;
-                &:focus {
-                    border-bottom: 3px solid $yellow;    
-                }
-            }
-            textarea {
-                height: 80px;
-                transform: translateY(8px);
-            }
-            #submit {
-                width: 100%;
-                line-height: 50px;
-                background-color: $gray;
-                color: $black;
-                border: 0;
-                border-bottom: 3px solid $gray;
-                transition: all .8s;
-                &:hover {
-                    background-color: $gray;
-                    border-bottom: 3px solid $gray;
+                .form-part {
                     color: $white;
+                    text-align: left;
+                    width: 351px;
+                    padding-bottom: 25px;
+                    label {
+                        display: inline-block; 
+                        width: 100px;
+                    }
+                    input,
+                    textarea {
+                        border: 0;
+                        width: 247px;
+                        height: 23.5px;
+                        background-color: $white;
+                        @include transition-duration(.5s);
+                        &:focus {
+                            background-color: $green;
+                        }
+                    }
+                    textarea {
+                        height: 105px;
+                    }
                 }
             }
-            form input[type="text"].error, form textarea.error {
-                background: #e6e6e6;
-                border-color: #c0392b;
-            }
-            fieldset {
-                border: 0px;
-                margin: 0;
-                padding: 0;
-            }
-            .required {
-                color: #e9266d;
-            }
-            #success, #error {
-                display: none;
-            }
-            #success span, #error span {
-                display: block;
-                position: absolute;
-                bottom: 0;
-                width:80%;
-            }
-            #success span p, #error span p {
-                margin-top: 6em;
-            }
-            #success span p {
-                color: #9bd32d;
-            }
-            #error span p {
-                color: black;
-            }
+        }
+    }
+    @include breakpoint(tablet-big) {
+    }
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(phone) {
+        background: linear-gradient($green 50%, $green-dark 50%);
+        .grid-2 {
+            width: 100%;
         }
     }
 }

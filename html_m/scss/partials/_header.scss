@@ -1,225 +1,98 @@
 .header {
     background-color: $green;
     text-align: center;
-    position: relative;
-    .logo {
-        width: 150px;
-        padding: 10px 0;
+    position: absolute;
+    z-index: 9999;
+    .logo-wrapp {
+        background-color: $white;
+        .logo {
+            width: 131.508661px;
+            padding: 20px 0;
+        }
     }
-    .show {
-        display: block;
-    }
-    .none {
-        display: none;
-    }
-    .none-logo {
-        display: none;
-    }
-    .hide-nav-btn {
-        display: none;
-    }
-    .mobile-nav {
-        display: none;
+    .social-wrapp {
+        background-color: $green-dark;
+        height: 97.417323px;
     }
     ul.menubar {
-        list-style: none;
-        font-size: 14px;
-        padding: 0 10px;
-        > a {
-            float: left;
-        }
-        > li {
-            display: inline-block;
-            position: relative;
-            margin-top: 22px;
-            > a {
+        li {
+            margin: 15.8px 0;
+            &:first-of-type {
+                margin: 0 0 17px 0;
+            }
+            &:last-of-type {
+                margin: 17px 0 0 0;
+            }
+            a {
+                font-size: 14px;
+                font-weight: 700;
                 color: $white;
-                display: block;
-                font-size: 15px;
                 text-transform: uppercase;
-                font-weight: 900;
-                margin: 0 10px;
-                padding: 10px 0;
-                @include transition-duration(.8s);
-                @include transition-timing-function(ease-out);
-                &:hover {
-                    color: $yellow;
+                @include transition-duration(.5s);
+                .ico {
+                    margin: 38px 0;
                 }
-            }
-            &.is-selected {
-                > a {
-                    color: $yellow;
+                &:hover {
+                    color: $green-dark;
                 }
             }
         }
-        > .social-icons {
-            float: right;
-            margin-top: 22px;
-            .social-icon-wrap-f,
-            .social-icon-wrap-i,
-            .social-icon-wrap-s,
-            .social-icon-wrap-v,
-            .social-icon-wrap-l {
-                width: 35px;
-                height: 35px;
-                border-radius: 50%;
-                border: 1px solid transparent;
-                position: relative;
-                float: left;
-                background-color: $white;
-                margin-right: 5px;
-                text-align: center;
-                @include transition(all .5s ease-out);
-                > a {
-                    position: absolute;
-                    top: 6px;
-                    left: 0;
-                    right: 0;
-                    .soc-last {
-                        position: absolute;
-                        top: 1px;
-                        left: 8px;
-                        right: 0;
-                    }
-                }
-                &:hover {
-                    background-color: transparent;
-                    border: 1px solid $white;
-                }
-                
-            }
-            
-            .social-icon-wrap-f {
-                &:hover {
-                    i {
-                        @include sprite(ico-facebook-hover);
-                    }
-                }
-            }
-            
-            .social-icon-wrap-i {
-                &:hover {
-                    i {
-                        @include sprite(ico-instagram-hover);
-                    }
-                }
-            }
-            
-            .social-icon-wrap-s {
-                &:hover {
-                    i {
-                        @include sprite(ico-snapchat-hover);
-                    }
-                }
-            }
-            
-            .social-icon-wrap-v {
-                &:hover {
-                    i {
-                        @include sprite(ico-viber-hover);
-                    }
-                }
-            }
-            
-            .social-icon-wrap-l {
-                &:hover {
-                    i {
-                        @include sprite(ico-linkedIn-hover);
-                    }
-                }
-            }
-            
+        .active {
+            color: $green-dark;
         }
-    }
-    .fix-nav {
-        z-index: 9999;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        background-color: $green;
     }
 
+    .menu-btn {
+        background-color: transparent;
+        position: fixed;
+        top: 1%;
+        transform: translateX(8px);
+    }
+    
+    .mobile-nav {
+        position: fixed;
+        top: 4%;
+        background-color: $green;
+        width: 165.535748px;
+        z-index: 9999;
+        ul {
+            li {
+                margin: 24.8px 0;
+                &:first-of-type {
+                    margin: 0 0 50px 0;
+                }
+                &:last-of-type {
+                    margin: 50px 0 0 0;
+                }
+                a {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $white;
+                    text-transform: uppercase;
+                    @include transition-duration(.5s);
+                    .ico {
+                        margin: 38px 0;
+                    }
+                    &:hover {
+                        color: $green-dark;
+                    }
+                }
+            }
+            .active {
+                color: $green-dark;
+            }
+        }
+        }
+    .show-none {
+        display: none;
+    }
+    .show-all {
+        display: block;
+    }
+    @include breakpoint(tablet-big) {
+    }
     @include breakpoint(tablet) {
     }
     @include breakpoint(phone) {
-        .mob-nav-on {
-            position: absolute;
-            top: 53px;
-            right: 20px;
-        }
-        .mob-nav-off {
-            position: absolute;
-            top: 53px;
-            right: 20px;
-        }
-        .logo-mob-nav {
-            float: left;
-            width: 100px;
-            height: 100px;
-            margin: 10px 0;
-            padding: 0 0 10px 10px;
-        }
-        .none-logo {
-            display: block;
-            padding: 10px 0 10px 10px;
-        }
-        .nav {
-            display: none;
-        }
-        .hidden {
-            display: none;
-        }
-        .hide-nav-btn {
-            display: block;
-            float: right;
-        }
-        .mobile-nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 60;
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 20px;
-            width: 100%;
-            display: block;
-            float: left;
-            clear: both;
-            background-color: $gray;
-
-            .sub-menu {
-                padding: 0 0;
-            }
-            ul.mobile-links {
-                clear: both;
-                background-color: $gray;
-                li {
-                    padding: 10px 0;
-                    a {
-                        text-align: left;
-                        color: $white;
-                        font-weight: 300;
-                        &:hover {
-                            color: $green;
-                        }
-                    }
-                }
-                span {
-                    > a {
-                        padding: 0 15px;
-                        line-height: 100px;
-                    }
-                }
-            }
-        }
-        .none {
-            display: none;
-        }
-        .show {
-            display: none;
-            @include transition-duration(2s);
-            @include transition-timing-function(ease-in);
-        }
     }
 }

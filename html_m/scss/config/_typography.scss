@@ -2,55 +2,44 @@ body {
     font-family: $font-main;
     font-size: 14px;
     color: $black;
-//    background: -moz-linear-gradient(left,rgba(128,128,128,0),rgba(128,128,128,1)), url('../../assets/img/content/pola_glave.png') no-repeat left fixed;
-//    background: -webkit-linear-gradient(left,rgba(128,128,128,0),rgba(128,128,128,1)), url('../../assets/img/content/pola_glave.png') no-repeat left fixed;
-//    background: -o-linear-gradient(left,rgba(128,128,128,0),rgba(128,128,128,1)), url('../../assets/img/content/pola_glave.png') no-repeat left fixed;
-//    background: -ms-linear-gradient(left,rgba(128,128,128,0),rgba(128,128,128,1)), url('../../assets/img/content/pola_glave.png') no-repeat left fixed;
-//    background: linear-gradient(left,rgba(128,128,128,0),rgba(128,128,128,1)), url('../../assets/img/content/pola_glave.png') no-repeat left fixed;
-}
-
-.fix-body {
-    margin-top: 83px;
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 60px;
     line-height: 50px;
 }
 
 h2 {
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 80px;
-    padding: 20px 0;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 43px 0 23px 0;
+    text-transform: uppercase;
+    color: $white;
 }
 
 h3 {
-    .fix-body {
-    margin-top: 54px;
-}
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 50px;
+    font-weight: 700;
+    font-size: 25px;
+    color: $white;
 }
 
 h4 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 20px;
     line-height: 60px;
 }
 
 h5 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
 }
 
 p {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 700;
+    font-size: 12px;
+    padding-bottom: 50px;
 }
 
 a {
