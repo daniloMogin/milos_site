@@ -38,16 +38,55 @@ h5 {
 
 p {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     padding-bottom: 50px;
 }
 
 a {
-    color: $black;
+    color: $white;
     text-decoration: none;
     font-size: 20px;
 }
 
 .bold {
     font-weight: 900;
+}
+
+.border-bot {
+    margin: 18px 0 9px 0;
+    width: 8px;
+    height: 8px;
+    background-color: #00A7A4;
+    position: relative;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    &:after,
+    &:after,
+    &:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #EF5557;
+        position: absolute;
+        top: 0;
+        left: 12px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+    &:before,
+    &:before,
+    &:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #015A56;
+        position: absolute;
+        top: 0;
+        left: 24px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
 }

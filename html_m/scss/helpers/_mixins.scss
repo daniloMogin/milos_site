@@ -1,27 +1,28 @@
 /*---------- sprite
 ------------------------------------------------------------------------------*/
+
 @mixin sprite($sprite) {
     background: sprite-url($icons) no-repeat sprite-position($icons, $sprite);
     height: image-height(sprite-file($icons, $sprite));
     width: image-width(sprite-file($icons, $sprite));
 }
 
+
 /*---------- breakpoints
 ------------------------------------------------------------------------------*/
+
 @mixin breakpoint($breakpoint) {
-    @if $breakpoint == "phone" {
+    @if $breakpoint=="phone" {
         @media only screen and (min-width: 50px) and (max-width: 639px) {
             @content;
         }
     }
-
-    @else if $breakpoint == "tablet" {
+    @else if $breakpoint=="tablet" {
         @media only screen and (min-width: 640px) and (max-width: 850px) {
             @content;
         }
     }
-
-    @else if $breakpoint == "tablet-big" {
+    @else if $breakpoint=="tablet-big" {
         @media only screen and (min-width: 851px) and (max-width: 1260px) {
             @content;
         }

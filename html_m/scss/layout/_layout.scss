@@ -1,13 +1,15 @@
 /*---------- layout
 -----------------------------------------------------------*/
+
 html {
-    #border-box {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -21,7 +23,6 @@ body {
         width: 50px;
         height: 50px;
     }
-
     .tp-show {
         opacity: 1;
         background-color: rgba($black, .7);
@@ -41,8 +42,7 @@ body {
             }
         }
     }
-    @include breakpoint(tablet) {
-    }
+    @include breakpoint(tablet) {}
     @include breakpoint(phone) {
         .tp-container {
             right: 17px;
@@ -52,7 +52,7 @@ body {
 }
 
 .main-grid {
-    max-width: 907px;
+    max-width: 1200px;
     min-width: 260px;
     margin: 0 auto;
     position: relative;
@@ -61,46 +61,31 @@ body {
         display: table;
         clear: both;
     }
-    .grid-2 {
+    .col-12 {
+        width: 100%;
+        float: left;
+    }
+    .col-8 {
+        width: 66.66%;
+        float: left;
+    }
+    .col-6 {
         width: 49%;
         float: left;
     }
-    .grid-3 {
+    .col-4 {
         width: 33.33%;
         float: left;
     }
-    @include breakpoint(tablet-big) {
+    .col-2 {
+        width: 16.66%;
+        float: left;
     }
-    @include breakpoint(tablet) {
+    .col-1 {
+        width: 8.33%;
+        float: left;
     }
-    @include breakpoint(phone) {
-    }
+    @include breakpoint(tablet-big) {}
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

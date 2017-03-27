@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>Social Bear Media</title>
+    <meta name="description" content="Digital Marketing Agency">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <script src="assets/scripts/modernizr.mini.js"></script>
+
+    <!-- Facebook card Open Graph -->
+    <meta property="og:title" content="Digital Marketing Agency" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://socialbearmedia.com/" />
+    <meta property="og:image" content="https://s17.postimg.org/pq9wmynqn/rsz_slider_banner1.jpg"
+    />
+    <meta property="og:site_name" content="Social Bear Media" />
+    <meta property="og:description" content="Social Bear Media is a creative digital agency. In our boutique firm we deliver fresh ideas and create amazing stories, enabling active online presence for our clients."
+    />
+
+    <!-- Tweeter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://socialbearmedia.com/">
+    <meta name="twitter:creator" content="@DaniloMog">
+    <meta name="twitter:title" content="Social Bear Media">
+    <meta name="twitter:description" content="Social Bear Media is a creative digital agency. In our boutique firm we deliver fresh ideas and create amazing online stories.">
+    <meta name="twitter:image" content="https://s16.postimg.org/q4967h12d/slider_banner1.jpg">
+
+</head>
+
+<body>
+    <!--
+    <div class="tp-container">
+        <a href="#0"><img src="assets/img/content/we-roar-digital.png" alt=""></a>
+    </div>-->
+    <!-- end of tp-container -->
+
+    <header class="header">
+        <nav class="main-nav">
+            <div class="nav">
+                <ul class="menubar nav-script">
+                    <div class="logo-wrapp">
+                        <a id="reload" href="#"><img src="assets/img/logo_novo.png" alt="White logo" class="logo" /></a>
+                    </div>
+                    <div class="headCon-wrapp">
+                        <li><a class="ancor" href="#destination1" data-scroll="about-us">About Us</a></li>
+                        <li><a class="ancor" href="#destination2" data-scroll="what-we-do">What We Do</a></li>
+                        <li><a class="ancor" href="#destination3" data-scroll="our-team">Our Team</a></li>
+                        <li><a class="ancor" href="#destination4" data-scroll="clients">Clients</a></li>
+                        <li><a class="ancor" href="#destination5" data-scroll="partners">Partners</a></li>
+                        <li><a class="ancor" href="#destination6" data-scroll="contact">Contact</a></li>
+                    </div>
+                    <li class="social-wrapp">
+                        <span>
+                            <a href="https://www.facebook.com/SocialBearMedia"><i class="ico facebook"></i></a>
+                            <a href="https://www.instagram.com/socialbearmedia"><i class="ico instagram"></i></a>
+                            <a href="https://www.facebook.com/SocialBearMedia"><i class="ico snapchat"></i></a>
+                            <a href="https://www.facebook.com/SocialBearMedia"><i class="ico viber"></i></a>
+                            <a href="https://www.linkedin.com/company-beta/10922447"><i class="ico linkedIn soc-last"></i></a>
+                        </span>
+                    </li>
+                </ul>
+                <!-- end of menubar -->
+            </div>
+            <!-- end of nav -->
+        </nav>
+        <!-- end of main-nav -->
+
+
+        <div class="mobile-wrap">
+            <!--<a id="reload" href="#"><img src="assets/img/logo_novo.png" alt="White logo" class="logo none-logo" /></a>-->
+            <div class="nav-btn hide-nav-btn">
+                <a href="javascript:;"><i id="nav-btn" class="fa fa-bars fa-3x mobile-icon"></i></a>
+            </div>
+            <!-- end of nav-btn -->
+            <nav class="mobile-nav none slide-in">
+                <ul class="mobile-logo-wrapp">
+                    <li>
+                        <a id="reload" href="#"><img src="assets/img/logo_novo.png" alt="White logo" class="logo-mob-nav" /></a>
+                        <!--<div class="nav-btn hide-nav-btn">
+                            <a href="javascript:;"><i class="fa fa-times fa-3x mobile-icon up-icon"></i></a>
+                        </div>-->
+                    </li>
+                </ul>
+                <ul class="mobile-links nav-script">
+                    <li><a href="#destination1" data-scroll="about-us">About Us</a></li>
+                    <li><a href="#destination2" data-scroll="what-we-do">What We Do</a></li>
+                    <li><a href="#destination3" data-scroll="our-team">Our Team</a></li>
+                    <li><a href="#destination4" data-scroll="clients">Clients</a></li>
+                    <li><a href="#destination5" data-scroll="partners">Partners</a></li>
+                    <li><a href="#destination6" data-scroll="news">News</a></li>
+                    <li><a href="#destination7" data-scroll="contact">Contact</a></li>
+                </ul>
+                <ul class="mobile-social-wrapp">
+                    <a href="https://www.facebook.com/SocialBearMedia"><i class="ico facebook"></i></a>
+                    <a href="https://www.instagram.com/socialbearmedia"><i class="ico instagram"></i></a>
+                    <a href="https://www.facebook.com/SocialBearMedia"><i class="ico snapchat"></i></a>
+                    <a href="https://www.facebook.com/SocialBearMedia"><i class="ico viber"></i></a>
+                    <a href="https://www.linkedin.com/company-beta/10922447"><i class="ico linkedIn soc-last"></i></a>
+                </ul>
+            </nav>
+            <!-- end of mobile-navigation -->
+        </div>
+        <!-- end of mobile-wrap -->
+    </header>
+    <!-- end of header -->
+
+    <section class="hero">
+        <div class="main-grid hero-wrapper">
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of hero -->
+
+    <section class="stats">
+        <div class="main-grid">
+            <div id="waypoint-counter" class="statsbar">
+                <div class="stat">
+                    <div class="stat-number timer" data-from="0" data-to="4000073"></div>
+                    <div class="stat-title">internet users in serbia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number timer" data-from="0" data-to="1542654"></div>
+                    <div class="stat-title">facebook users in serbia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number timer" data-from="0" data-to="457545"></div>
+                    <div class="stat-title">instagram accounts in serbia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number timer" data-from="0" data-to="21324"></div>
+                    <div class="stat-title">snapchat accounts in serbia</div>
+                </div>
+            </div>
+            <!-- end of waypoint-counter -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of stats counter -->
+
+    <section id="destination1" data-anchor="about-us" class="about-us">
+        <div class="main-grid">
+            <h2>About Us</h2>
+            <p><span class="bold">Social Bear Media</span> is a creative digital agency. We deliver fresh
+                ideas and create amazing stories, enabling active online presence for our clients.
+            </p>
+            <p>We're the cool kids, the creative, ones that everybody wants to hang out with. We love brands with souls. Love
+                creating a story and making it pop! Every client is a new story, new challenge and a new opportunity.
+                Let us show you how we see your brand and its full potential in a digital world that keeps evolving.
+                 We know it can get scary sometimes. Don’t worry, we got you.
+            </p>
+            <img src="assets/img/content/we-roar-digital.png" alt="We roar digital" class="we-roar-digital animation-element slide-left">
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of about-us -->
+
+    <section id="destination2" data-anchor="what-we-do" class="what-we-do">
+        <div class="main-grid">
+            <h2>What We Do</h2>
+            <p>We listen, research, analyse, brainstorm, create, implement, execute, report and deliver results.</p>
+            
+            <section class="thumbs-wrapper">
+                <ul id="da-thumbs" class="da-thumbs">
+                    <li class="animation-element slide-left">
+                        <a href="javascrip:;">
+                            <img src="assets/img/content/wwd/wwd1.jpg" />
+                            <div>
+                                <span>digital strategy</span>
+                                <p>Digital marketing isn’t just a random Facebook post and a website. Your online approach needs a plan
+                                   and strategic approach. Social Bear Media creates fully integrated campaign strategies. Key words
+                                   are: competition analysis, brainstorming, right social channels, creative and engaging content, reaching
+                                   goals and delivering KPI’s.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- end of animation element -->
+                    <li class="animation-element slide-up">
+                        <a href="javascrip:;">
+                            <img src="assets/img/content/wwd/wwd2.jpg" />
+                            <div>
+                                <span>social media and content</span>
+                                <p>SOCIAL MEDIA is in our genes. We understand it, feel it and we are good at: Always with an iPhone in
+                                   our paws and many apps running in the back. Without right CONTENT there's no good Social Media campaign.
+                                   We create the right story your clients will understand and love. We want to touch and inspire, make
+                                   them fall in love with brand itself. Innovative design and interesting copywriting is what shapes
+                                   our final content. Content we use across social media channels. Every Brand is unique and deserves
+                                   its own story. We have plenty stories to tell.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- end of animation element -->
+                    <li class="animation-element slide-left">
+                        <a href="javascrip:;">
+                            <img src="assets/img/content/wwd/wwd3.jpg" />
+                            <div>
+                                <span>design and web development</span>
+                                <p>After choosing our strategy direction we implement design and web development. It is important how we shape
+                                   our message. This is where we let our creativity and expertise blossom.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- end of animation element -->
+                    <li class="animation-element slide-up">
+                        <a href="javascrip:;">
+                            <img src="assets/img/content/wwd/wwd4.jpg" />
+                            <div>
+                                <span>online advertising</span>
+                                <p>Brands need online advertising in order to reach it’s specific audience. Social Bear Media provides It’s clients
+                                   with Online Advertising Media Planning. We provide a full range of services from initial research
+                                   and strategic planning to final execution of the campaign. Followed by reporting and business analysis
+                                   so you can do your business while we take care of your digital marketing campaigns.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- end of animation element -->
+                </ul>
+                <!-- end of da-thumbs -->
+            </section>
+            <!-- end of thumbs-wrapper -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of what-we-do -->
+
+    <section id="destination3" data-anchor="our-team" class="our-team">
+        <div class="main-grid">
+            <h2>Our Team</h2>
+            <div class="ot-wrapper">
+                <div class="ot-box">
+                    <!--<img src="assets/img/team/milos.jpg" alt="">-->
+                    <span>
+                        <p>Milos Primovic</p>
+                    </span>
+                    <span>
+                        <small>digital marketing stategist</small>
+                    </span>
+                    <span>
+                        <small>CEO & Founder</small>
+                    </span>
+                    <div class="border-bot"></div>
+                    <p>The original Social Bear “Give it a purpose and make it pop!". More than 5 years of experience in 
+                        digital marketing. Worked with vast number of clients from different industries and continents, 
+                        small businesses to large corporations.</p>
+                    <div class="ot-social">
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico facebook"></i></a>
+                        <a href="https://www.instagram.com/socialbearmedia"><i class="ico instagram"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico snapchat"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico viber"></i></a>
+                        <a href="https://www.linkedin.com/company-beta/10922447"><i class="ico linkedIn soc-last"></i></a>
+                    </div>
+                </div>
+                <!-- end of ot-box -->
+                <div class="ot-box">
+                    <!--<img src="assets/img/team/danilo.jpg" alt="">-->
+                    <span>
+                        <p>Danilo Mogin</p>
+                    </span>
+                    <span>
+                        <small>web developer</small>
+                    </span>
+                    <div class="border-bot"></div>
+                    <p>Somebody said chill? It's probably Danilo our chill Bear. There's not a thing that could upset him, never
+                        snaps nor looses his cool. Super creative and proactive mind that simply does the work. Never missed
+                        a deadline which is very rare in his line of work.</p>
+                    <div class="ot-social">
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico facebook"></i></a>
+                        <a href="https://www.instagram.com/socialbearmedia"><i class="ico instagram"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico snapchat"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico viber"></i></a>
+                        <a href="https://www.linkedin.com/company-beta/10922447"><i class="ico linkedIn soc-last"></i></a>
+                    </div>
+                </div>
+                <!-- end of ot-box -->
+                <div class="ot-box">
+                    <!--<img src="assets/img/team/darko.jpg" alt="">-->
+                    <span>
+                        <p>Darko Vukosavljev</p>
+                    </span>
+                    <span>
+                        <small>Web designer Art Direktor</small>
+                    </span>
+                    <div class="border-bot"></div>
+                    <p>Our creative bear. Darko loves beauty in it’s pure form. His designs are unique and clean. Or as we like
+                        to put it -Clean design, dirty mind. Lot’s of his work can be seen on city lights and billboards all over
+                        mayor cities in Serbia.
+                    </p>
+                    <div class="ot-social">
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico facebook"></i></a>
+                        <a href="https://www.instagram.com/socialbearmedia"><i class="ico instagram"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico snapchat"></i></a>
+                        <a href="https://www.facebook.com/SocialBearMedia"><i class="ico viber"></i></a>
+                        <a href="https://www.linkedin.com/company-beta/10922447"><i class="ico linkedIn soc-last"></i></a>
+                    </div>
+                    <!-- end of ot-social -->
+                </div>
+                <!-- end of ot-box -->
+            </div>
+            <!-- end of ot-wrapper -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of our-team -->
+
+    <section id="destination4" data-anchor="clients" class="clients">
+        <div class="main-grid">
+            <h2>Clients</h2>
+            <p>We do love our clients</p>
+            <div class="rotator-wrapper">
+
+                <div class="col-4">
+                    <a href="http://www.renault.rs/">
+                        <img src="assets/img/logotipi/renault_logo2.png" alt="renault" >
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="http://www.dacia.rs/">
+                        <img src="assets/img/logotipi/dacia.png" alt="dacia" />
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="http://www.dreamweddingbylena.com/">
+                        <img src="assets/img/logotipi/dw_logo.png" alt="dw_logo" class="rw-dw_logo" />
+                    </a>
+                </div>
+
+                <!--<ul id="clients-list">
+                    <li>
+                        <a href="http://www.renault.rs/">
+                            <img src="assets/img/logotipi/dacia.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.dacia.rs/">
+                            <img src="assets/img/logotipi/renault_logo.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.cercil.rs/">
+                            <img src="assets/img/logotipi/dw_logo.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.dreamweddingbylena.com/">
+                            <img src="assets/img/logotipi/ninamedia.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                </ul>-->
+                <!-- end of client-list -->
+            </div>
+            <!-- end of rotator-wrapper -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of clients -->
+
+    <section id="destination5" data-anchor="partners" class="partners">
+        <div class="main-grid">
+            <h2>Partners</h2>
+            <p>A well played team always wins</p>
+            <div class="rotator-wrapper">
+                <div class="col-4">
+                    <a href="http://www.renault.rs/">
+                        <img src="assets/img/logotipi/mediodrom.png" alt="mediodrom" >
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="http://www.dacia.rs/">
+                        <img src="assets/img/logotipi/SearchDisplay.png" alt="SearchDisplay" class="rw-dw_logo"  />
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <a href="http://www.dreamweddingbylena.com/">
+                        <img src="assets/img/logotipi/hm.png" alt="headmade" class="rw-dw_logo" />
+                    </a>
+                </div>
+                <!--<ul id="partners-list">
+                    <li>
+                        <a href="http://headmade.rs/">
+                            <img src="assets/img/logotipi/mediodrom.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://mediodrom.si/">
+                            <img src="assets/img/logotipi/SearchDisplay.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://searchdisplay.rs/">
+                            <img src="assets/img/logotipi/hm.png" alt="renault" />
+                            <p>dacia</p>
+                        </a>
+                    </li>
+                </ul>-->
+                <!-- end of partner-list -->
+            </div>
+            <!-- end of rotator-wrapper -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of partners -->
+
+    <section id="destination6" data-anchor="contact" class="contact">
+        <div class="main-grid">
+            <div class="col-6">
+                <div class="contact-wrapper">
+                    <div class="details-wrapper">
+                        <h2>contact</h2>
+                        <p>Social Bear Media</p>
+                        <p>Adress: Ive Lole Ribara 6</p>
+                        <p>2100, Novi Sad</p>
+                        <p>office@socialbear.com</p>
+                        <p>+381/66 45 00 45</p>
+
+                        <li class="social-wrapp">
+                            <span>
+                                <a href="javscript:;"><i class="ico facebook"></i></a>
+                                <a href="javscript:;"><i class="ico instagram"></i></a>
+                                <a href="javscript:;"><i class="ico snapchat"></i></a>
+                                <a href="javscript:;"><i class="ico linkedIn soc-last"></i></a>
+                                <a href="javscript:;"><i class="ico viber"></i></a>
+                            </span>
+                        </li>
+                    </div>
+                    <!-- end of details-wrapper -->
+                </div>
+                <!-- end of contact-wrapper -->
+            </div>
+            <!-- end of grid-2 -->
+            <div class="col-6">
+                <div class="contact-wrapper dark">
+                    <div class="email-wrapper">
+                        <form id="contact" name="contact" method="post">
+                            <fieldset>
+                                <div class="form-part">
+                                    <label for="name" id="name">Name<span class="required">*</span></label>
+                                    <input type="text" name="name" id="name" value="" required />
+                                </div>
+                                <!-- end of form-part -->
+                                <div class="form-part">
+                                    <label for="email" id="email">Email<span class="required">*</span></label>
+                                    <input type="text" name="email" id="email" value="" required />
+                                </div>
+                                <!-- end of form-part -->
+                                <div class="form-part">
+                                    <label for="phone" id="phone">Phone</label>
+                                    <input type="text" name="phone" id="phone" value="" />
+                                </div>
+                                <!-- end of form-part -->
+                                <div class="form-part">
+                                    <label for="Message" id="message">Message<span class="required">*</span></label>
+                                    <textarea name="message" id="message" required></textarea>
+                                </div>
+                                <!-- end of form-part -->
+                                <div class="form-part">
+                                    <button type="submit">Send</button>
+                                </div>
+                                <!-- end of form-part -->
+                            </fieldset>
+                            <!-- end of fieldset -->
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- end of email-wrapper -->
+                </div>
+                <!-- end of contact-wrapper -->
+            </div>
+            <!-- end of grid-2 -->
+        </div>
+        <!-- end of main-grid -->
+    </section>
+    <!-- end of contact -->
+
+    <footer class="footer">
+        <div class="main-grid">
+            <p>All rights reserved.<span> Social Bear Media</span></p>
+        </div>
+        <!-- end of main-grid -->
+    </footer>
+    <!-- end of footer -->
+
+    <script src="assets/scripts/jQuery.scrollSpeed.js"></script>
+    <script src="assets/scripts/jquery.countTo.js"></script>
+    <script src="assets/scripts/jquery.waypoints.min.js"></script>
+    <script src="assets/scripts/jquery.hoverdir.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script type="text/javascript">
+        $(function() {
+        
+            $('#st-accordion').accordion({
+                oneOpenedItem	: true
+            });
+            
+        });
+    </script>
+</body>
+
+</html>

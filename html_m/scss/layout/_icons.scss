@@ -1,5 +1,6 @@
 /*----------  icons
 ------------------------------------------------------------------------------*/
+
 .ico {
     display: inline-block;
     width: 24.185197px;
@@ -10,42 +11,31 @@
     &.facebook {
         @include sprite(ico-facebook);
         &:hover {
-            @include sprite(ico-facebook-hover);
+            @include sprite(ico-facebook-yellow);
         }
-    }&.facebook-yellow {
-        @include sprite(ico-facebook-yellow);
     }
     &.instagram {
         @include sprite(ico-instagram);
         &:hover {
-            @include sprite(ico-instagram-hover);
+            @include sprite(ico-instagram-yellow);
         }
-    }
-    &.instagram-yellow {
-        @include sprite(ico-instagram-yellow);
     }
     &.linkedIn {
         @include sprite(ico-linkedIn);
         &:hover {
-            @include sprite(ico-linkedIn-hover);
+            @include sprite(ico-linkedIn-yellow);
         }
-    }
-    &.linkedIn-yellow {
-        @include sprite(ico-linkedIn-yellow);
     }
     &.snapchat {
         @include sprite(ico-snapchat);
         &:hover {
-            @include sprite(ico-snapchat-hover);
+            @include sprite(ico-snapchat-yellow);
         }
     }
     &.viber {
         @include sprite(ico-viber);
         &:hover {
-            @include sprite(ico-viber-hover);
+            @include sprite(ico-viber-yellow);
         }
-    }
-    &.viber-yellow {
-        @include sprite(ico-viber-yellow);
     }
 }

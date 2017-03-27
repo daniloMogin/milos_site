@@ -1,39 +1,11 @@
-/*----------  equal col
-------------------------------------------------------------------------------*/
-equalheight = function (container) {
-
-    var currentTallest = 0,
-        currentRowStart = 0,
-        rowDivs = new Array(),
-        $el,
-        topPosition = 0;
-    $(container).each(function () {
-
-        $el = $(this);
-        $($el).height('auto')
-        topPostion = $el.position().top;
-
-        if (currentRowStart != topPostion) {
-            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                rowDivs[currentDiv].height(currentTallest);
-            }
-            rowDivs.length = 0; // empty the array
-            currentRowStart = topPostion;
-            currentTallest = $el.height();
-            rowDivs.push($el);
-        } else {
-            rowDivs.push($el);
-            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-        }
-        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-            rowDivs[currentDiv].height(currentTallest);
-        }
-    });
-}
-$('document').ready(function ($) {
-    /*----------  equal height call
+$('document').ready(function($) {
+    /*----------  moving hover
     ------------------------------------------------------------------------------*/
-    equalheight('.ot-box');
+    $(" #da-thumbs > li ").each(function() {
+        $(this).hoverdir({
+            hoverDelay: 75
+        });
+    });
 
     /*----------  clients
     ------------------------------------------------------------------------------*/
@@ -58,7 +30,7 @@ $('document').ready(function ($) {
     function rotateClients() {
         if (rotating != false) {
             var $first = $('#clients-list li:first');
-            $first.animate({ 'margin-left': '-140px' }, 1000, function () {
+            $first.animate({ 'margin-left': '-140px' }, 1000, function() {
                 $first.remove().css({ 'margin-left': '0px' });
                 $('#clients-list li:last').after($first);
             });
@@ -77,10 +49,10 @@ $('document').ready(function ($) {
     var seepartners = setInterval(rotatePartners, partnerspeed);
 
     $(document).on({
-        mouseenter: function () {
+        mouseenter: function() {
             rotating = false; // turn off rotation when hovering
         },
-        mouseleave: function () {
+        mouseleave: function() {
             rotating = true;
         }
     }, '.partners');
@@ -88,7 +60,7 @@ $('document').ready(function ($) {
     function rotatePartners() {
         if (rotating != false) {
             var $first = $('#partners-list li:first');
-            $first.animate({ 'margin-left': '-140px' }, 1000, function () {
+            $first.animate({ 'margin-left': '-140px' }, 1000, function() {
                 $first.remove().css({ 'margin-left': '0px' });
                 $('#partners-list li:last').after($first);
             });
@@ -118,6 +90,16 @@ $('document').ready(function ($) {
 
     $(document).on("scroll", onScroll);
 
+    /*----------  fixed nav
+    ------------------------------------------------------------------------------*/
+    var nav = $(".main-nav");
+    var pos = nav.offset().top;
+    $(window).scroll(function() {
+        var fix = ($(this).scrollTop() > pos) ? true : false;
+        nav.toggleClass("fix-nav", fix);
+    });
+    /*----------  end of fixed nav  ----------*/
+
     /*----------  Back to top
     ------------------------------------------------------------------------------*/
     // browser window scroll (in pixels) after which the "back to top" link is shown
@@ -127,7 +109,7 @@ $('document').ready(function ($) {
         //grab the "back to top" link
         $back_to_top = $(".tp-container");
 
-    $(window).scroll(function (event) {
+    $(window).scroll(function(event) {
         var scroll = $(window).scrollTop();
         if (scroll > offset) {
             $(".menu-btn").removeClass("show-none");
@@ -148,50 +130,50 @@ $('document').ready(function ($) {
         }
     });
 
+    $(document).on("scroll", onScroll);
+
     //smooth scroll to top
-    $back_to_top.on("click", function (event) {
+    $back_to_top.on("click", function(event) {
         event.preventDefault();
         $("body,html").animate({
             scrollTop: 0,
-        }, scroll_top_duration
-        );
+        }, scroll_top_duration);
     });
     /*----------  end of back to top  ----------*/
 
     // burger menu
-    $(".menu-btn>img").on('click', function () {
-        for(var i = 0; i < $(".menu-btn>img").length; i++) {
-            console.log($(".menu-btn>img").length);
-            if($('.menu-btn>img').eq(i).hasClass('show-none')) {
-                $('.menu-btn>img').eq(i).removeClass('show-none');
-                $('.menu-btn>img').eq(i).addClass('show-all');
+    //     $(".menu-btn>img").on('click', function () {
+    //         for(var i = 0; i < $(".menu-btn>img").length; i++) {
+    //             console.log($(".menu-btn>img").length);
+    //             if($('.menu-btn>img').eq(i).hasClass('show-none')) {
+    //                 $('.menu-btn>img').eq(i).removeClass('show-none');
+    //                 $('.menu-btn>img').eq(i).addClass('show-all');
 
-                $('.mobile-nav>ul').addClass('show-all');
-                $('.mobile-nav>ul').removeClass('show-none');
-            } else {
-                $('.menu-btn>img').eq(i).addClass('show-none');
-                $('.menu-btn>img').eq(i).removeClass('show-all');
+    //                 $('.mobile-nav>ul').addClass('show-all');
+    //                 $('.mobile-nav>ul').removeClass('show-none');
+    //             } else {
+    //                 $('.menu-btn>img').eq(i).addClass('show-none');
+    //                 $('.menu-btn>img').eq(i).removeClass('show-all');
 
-                $('.mobile-nav>ul').addClass('show-none');
-                $('.mobile-nav>ul').removeClass('show-all');
-            }
-        }
-    });
+    //                 $('.mobile-nav>ul').addClass('show-none');
+    //                 $('.mobile-nav>ul').removeClass('show-all');
+    //             }
+    //         }
+    //     });
 
 });
 
 /*----------  add class to menu bar links on scroll
 ------------------------------------------------------------------------------*/
 function onScroll(event) {
-    var scrollPos = $(document).scrollTop();
-    $("ul.nav-script>li>a").each(function () {
+    var scrollPos = $(document).scrollTop() + 80;
+    $("ul.nav-script li a.ancor").each(function() {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $("ul.nav-script>li").removeClass("active");
+            $("ul.nav-script li a.ancor").removeClass("active");
             currLink.addClass("active");
-        }
-        else {
+        } else {
             currLink.removeClass("active");
         }
     });
@@ -199,19 +181,19 @@ function onScroll(event) {
 
 /*----------  scroll to position
 ------------------------------------------------------------------------------*/
-$("ul.nav-script>li>a, .mobile-nav>ul>li>a").on("click", function () {
-    var scrollAnchor = $(this).attr("data-scroll"),
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
-    $("body,html").animate({
-        scrollTop: scrollPoint
-    }, 1000);
+$("ul.nav-script li a, .mobile-nav>ul>li>a").on("click", function() {
+        var scrollAnchor = $(this).attr("data-scroll"),
+            scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 77;
+        $("body,html").animate({
+            scrollTop: scrollPoint
+        }, 1000);
 
-    return false;
-})
-/*----------  end of scrol to position  ----------*/
+        return false;
+    })
+    /*----------  end of scrol to position  ----------*/
 
 /*----------  reload page
     ------------------------------------------------------------------------------*/
-$("#reload").click(function () {
+$("#reload").click(function() {
     location.reload();
 });

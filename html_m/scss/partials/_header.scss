@@ -1,98 +1,74 @@
 .header {
     background-color: $green;
     text-align: center;
-    position: absolute;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
     z-index: 9999;
-    .logo-wrapp {
-        background-color: $white;
-        .logo {
-            width: 131.508661px;
-            padding: 20px 0;
+    width: 100%;
+    .menubar {
+        width: 100%;
+        .logo-wrapp {
+            float: left;
+            background-color: $white;
+            width: 20%;
+            .logo {
+                width: 131.508661px;
+                padding: 10px;
+            }
         }
-    }
-    .social-wrapp {
-        background-color: $green-dark;
-        height: 97.417323px;
-    }
-    ul.menubar {
-        li {
-            margin: 15.8px 0;
-            &:first-of-type {
-                margin: 0 0 17px 0;
-            }
-            &:last-of-type {
-                margin: 17px 0 0 0;
-            }
-            a {
-                font-size: 14px;
-                font-weight: 700;
-                color: $white;
-                text-transform: uppercase;
-                @include transition-duration(.5s);
-                .ico {
-                    margin: 38px 0;
+        .headCon-wrapp {
+            width: 60%;
+            float: left;
+            li {
+                display: inline;
+                padding-left: 15px;
+                &:first-of-type {
+                    padding: 0;
                 }
-                &:hover {
-                    color: $green-dark;
+                a {
+                    line-height: 68px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 0 5px;
+                    text-decoration: none;
+                    @include transition-duration($mediumDuration);
+                    &:hover {
+                        color: $yellow;
+                    }
                 }
             }
         }
         .active {
-            color: $green-dark;
+            color: $yellow;
+            // padding-bottom: 22px;
+            // border-bottom: 8px solid $yellow;
         }
-    }
-
-    .menu-btn {
-        background-color: transparent;
-        position: fixed;
-        top: 1%;
-        transform: translateX(8px);
-    }
-    
-    .mobile-nav {
-        position: fixed;
-        top: 4%;
-        background-color: $green;
-        width: 165.535748px;
-        z-index: 9999;
-        ul {
-            li {
-                margin: 24.8px 0;
-                &:first-of-type {
-                    margin: 0 0 50px 0;
-                }
-                &:last-of-type {
-                    margin: 50px 0 0 0;
-                }
-                a {
-                    font-size: 14px;
-                    font-weight: 700;
-                    color: $white;
-                    text-transform: uppercase;
-                    @include transition-duration(.5s);
-                    .ico {
-                        margin: 38px 0;
-                    }
-                    &:hover {
-                        color: $green-dark;
-                    }
-                }
-            }
-            .active {
-                color: $green-dark;
+        .social-wrapp {
+            float: left;
+            background-color: $yellow;
+            width: 20%;
+            i {
+                margin: 23px 2px 14px 2px;
             }
         }
+        .fix-nav {
+            z-index: 999;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: $gray-dark;
+            @include transition-duration($slowDuration);
+            @include transition-timing-function(ease-out);
         }
-    .show-none {
+    }
+    .mobile-wrap {
         display: none;
     }
-    .show-all {
-        display: block;
-    }
-    @include breakpoint(tablet-big) {
-    }
-    @include breakpoint(tablet) {
-    }
-    @include breakpoint(phone) {
-    }
+    @include breakpoint(tablet-big) {}
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {}
 }
