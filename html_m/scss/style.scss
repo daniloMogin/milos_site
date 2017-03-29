@@ -33,7 +33,7 @@
 
 .hero {
     height: 576px;
-    background: url('../../assets/img/content/SBM-FB-01.png');
+    background: url('../../assets/img/content/SBM-FB-01-RES.png');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -352,7 +352,6 @@
     }
     .rotator-wrapper {
         display: block;
-        width: 546px;
         margin: 0 auto;
         overflow: hidden;
         padding-bottom: 40px;
@@ -375,6 +374,19 @@
                     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                     filter: alpha(opacity=100);
                     opacity: 1.0;
+                }
+            }
+        }
+    }
+    @include breakpoint(tablet-big) {}
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {
+        .rotator-wrapper {
+            .col-4 {
+                width: 15%;
+                padding: 0;
+                img {
+                    width: 25px;
                 }
             }
         }
@@ -479,7 +491,7 @@
     width: 100%;
     background: linear-gradient(to right, $green 50%, $green-dark 50%);
     overflow: hidden;
-    .grid-2 {
+    .col-6 {
         width: 50%;
         float: left;
         text-align: right;
@@ -494,6 +506,8 @@
                     padding: 0;
                 }
                 p {
+                    font-weight: 400;
+                    font-size: 18px;
                     color: $white;
                     padding: 0;
                 }
@@ -501,7 +515,7 @@
         }
         .email-wrapper {
             overflow: hidden;
-            padding: 16% 0 0 14%;
+            padding: 12% 0 0 14%;
             float: left;
             form {
                 width: 100%;
@@ -512,7 +526,7 @@
                     padding-bottom: 25px;
                     label {
                         display: inline-block;
-                        width: 100px;
+                        width: 100%;
                     }
                     input,
                     textarea {
@@ -520,13 +534,27 @@
                         width: 247px;
                         height: 23.5px;
                         background-color: $white;
-                        @include transition-duration(.5s);
+                        @include transition-duration($slowDuration);
                         &:focus {
                             background-color: $green;
                         }
                     }
                     textarea {
                         height: 105px;
+                        resize: none;
+                    }
+                    .button {
+                        border: 0;
+                        background-color: $yellow;
+                        color: darken($yellow, 20%);
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding: 5px 14px;
+                        @include transition-duration($slowDuration);
+                        &:hover {
+                            color: $yellow;
+                            background-color: darken($yellow, 20%);
+                        }
                     }
                 }
             }
@@ -536,7 +564,7 @@
     @include breakpoint(tablet) {}
     @include breakpoint(phone) {
         background: linear-gradient($green 50%, $green-dark 50%);
-        .grid-2 {
+        .col-6 {
             width: 100%;
         }
     }

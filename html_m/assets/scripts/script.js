@@ -1,4 +1,4 @@
-$('document').ready(function($) {
+$(function() {
     /*----------  moving hover
     ------------------------------------------------------------------------------*/
     $(" #da-thumbs > li ").each(function() {
@@ -90,6 +90,11 @@ $('document').ready(function($) {
 
     $(document).on("scroll", onScroll);
 
+
+
+    console.log($(".mobile-wrap").width())
+
+
     /*----------  fixed nav
     ------------------------------------------------------------------------------*/
     var nav = $(".main-nav");
@@ -98,6 +103,13 @@ $('document').ready(function($) {
         var fix = ($(this).scrollTop() > pos) ? true : false;
         nav.toggleClass("fix-nav", fix);
     });
+    var navM = $(".mobile-nav");
+    if ($(".mobile-wrap").width() < 639) {
+        console.log(`asd`);
+        console.log(navM);
+        navM.toggleClass("show")
+    }
+
     /*----------  end of fixed nav  ----------*/
 
     /*----------  Back to top
@@ -162,11 +174,12 @@ $('document').ready(function($) {
     //     });
 
 });
+// end of $( document ).ready() block.
 
 /*----------  add class to menu bar links on scroll
 ------------------------------------------------------------------------------*/
 function onScroll(event) {
-    var scrollPos = $(document).scrollTop() + 80;
+    var scrollPos = $(document).scrollTop() + 70;
     $("ul.nav-script li a.ancor").each(function() {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -183,7 +196,7 @@ function onScroll(event) {
 ------------------------------------------------------------------------------*/
 $("ul.nav-script li a, .mobile-nav>ul>li>a").on("click", function() {
         var scrollAnchor = $(this).attr("data-scroll"),
-            scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 77;
+            scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 67;
         $("body,html").animate({
             scrollTop: scrollPoint
         }, 1000);

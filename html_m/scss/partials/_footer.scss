@@ -10,4 +10,12 @@
             color: $white;
         }
     }
+    @include breakpoint(tablet-big) {}
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {
+        p {
+            font-size: 12px;
+            padding-right: 15px;
+        }
+    }
 }

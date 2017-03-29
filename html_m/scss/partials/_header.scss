@@ -69,6 +69,62 @@
         display: none;
     }
     @include breakpoint(tablet-big) {}
-    @include breakpoint(tablet) {}
-    @include breakpoint(phone) {}
+    @include breakpoint(tablet) {
+        .menubar {
+            .headCon-wrapp {
+                li {
+                    a {
+                        font-size: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+            .social-wrapp {
+                i {
+                    margin: 23px 0 14px 0;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        .main-nav {
+            display: none;
+        }
+        .mobile-wrap {
+            display: block;
+            .mobile-nav {
+                position: fixed;
+                overflow: auto;
+                top: 0;
+                left: 0;
+                width: 70%;
+                z-index: 60;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 20px;
+                display: block;
+                float: left;
+                clear: both;
+                background-color: #00A7A4;
+                .mobile-logo-wrapp {
+                    background: $white;
+                    img {
+                        width: 75%;
+                    }
+                }
+                .mobile-headCon-wrapp {
+                    background: $green;
+                }
+                .mobile-social-wrapp {
+                    background: $yellow;
+                }
+            }
+            .show {
+                display: none;
+            }
+            .hide-nav-btn {
+                display: none;
+            }
+        }
+    }
 }

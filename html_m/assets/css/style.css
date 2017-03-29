@@ -288,7 +288,7 @@ h5 {
 
 p {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   padding-bottom: 50px; }
 
 a {
@@ -557,6 +557,43 @@ body .tp-show {
       transition-timing-function: ease-out; }
   .header .mobile-wrap {
     display: none; }
+  @media only screen and (min-width: 640px) and (max-width: 850px) {
+    .header .menubar .headCon-wrapp li a {
+      font-size: 10px;
+      margin: 0; }
+    .header .menubar .social-wrapp i {
+      margin: 23px 0 14px 0; } }
+  @media only screen and (min-width: 50px) and (max-width: 639px) {
+    .header .main-nav {
+      display: none; }
+    .header .mobile-wrap {
+      display: block; }
+      .header .mobile-wrap .mobile-nav {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        width: 70%;
+        z-index: 60;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 20px;
+        display: block;
+        float: left;
+        clear: both;
+        background-color: #00A7A4; }
+        .header .mobile-wrap .mobile-nav .mobile-logo-wrapp {
+          background: #fff; }
+          .header .mobile-wrap .mobile-nav .mobile-logo-wrapp img {
+            width: 75%; }
+        .header .mobile-wrap .mobile-nav .mobile-headCon-wrapp {
+          background: #00A7A4; }
+        .header .mobile-wrap .mobile-nav .mobile-social-wrapp {
+          background: #F5BC17; }
+      .header .mobile-wrap .show {
+        display: none; }
+      .header .mobile-wrap .hide-nav-btn {
+        display: none; } }
 
 .footer {
   clear: both;
@@ -568,12 +605,16 @@ body .tp-show {
     padding: 0; }
     .footer p span {
       color: #fff; }
+  @media only screen and (min-width: 50px) and (max-width: 639px) {
+    .footer p {
+      font-size: 12px;
+      padding-right: 15px; } }
 
 /*----------  hero
 ------------------------------------------------------------------------------*/
 .hero {
   height: 576px;
-  background: url("../../assets/img/content/SBM-FB-01.png");
+  background: url("../../assets/img/content/SBM-FB-01-RES.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto; }
@@ -810,7 +851,6 @@ body .tp-show {
   .clients .rotator-wrapper,
   .partners .rotator-wrapper {
     display: block;
-    width: 546px;
     margin: 0 auto;
     overflow: hidden;
     padding-bottom: 40px;
@@ -836,6 +876,14 @@ body .tp-show {
           -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
           filter: alpha(opacity=100);
           opacity: 1.0; }
+  @media only screen and (min-width: 50px) and (max-width: 639px) {
+    .clients .rotator-wrapper .col-4,
+    .partners .rotator-wrapper .col-4 {
+      width: 15%;
+      padding: 0; }
+      .clients .rotator-wrapper .col-4 img,
+      .partners .rotator-wrapper .col-4 img {
+        width: 25px; } }
 
 /*----------  partners
 ------------------------------------------------------------------------------*/
@@ -920,38 +968,40 @@ body .tp-show {
   width: 100%;
   background: linear-gradient(to right, #00a7a4 50%, #015a56 50%);
   overflow: hidden; }
-  .contact .grid-2 {
+  .contact .col-6 {
     width: 50%;
     float: left;
     text-align: right; }
-    .contact .grid-2 .contact-wrapper {
+    .contact .col-6 .contact-wrapper {
       padding-right: 14%;
       overflow: hidden; }
-      .contact .grid-2 .contact-wrapper .details-wrapper {
+      .contact .col-6 .contact-wrapper .details-wrapper {
         float: right;
         text-align: left;
         padding: 50px 0; }
-        .contact .grid-2 .contact-wrapper .details-wrapper h2 {
+        .contact .col-6 .contact-wrapper .details-wrapper h2 {
           padding: 0; }
-        .contact .grid-2 .contact-wrapper .details-wrapper p {
+        .contact .col-6 .contact-wrapper .details-wrapper p {
+          font-weight: 400;
+          font-size: 18px;
           color: #fff;
           padding: 0; }
-    .contact .grid-2 .email-wrapper {
+    .contact .col-6 .email-wrapper {
       overflow: hidden;
-      padding: 16% 0 0 14%;
+      padding: 12% 0 0 14%;
       float: left; }
-      .contact .grid-2 .email-wrapper form {
+      .contact .col-6 .email-wrapper form {
         width: 100%; }
-        .contact .grid-2 .email-wrapper form .form-part {
+        .contact .col-6 .email-wrapper form .form-part {
           color: #fff;
           text-align: left;
           width: 351px;
           padding-bottom: 25px; }
-          .contact .grid-2 .email-wrapper form .form-part label {
+          .contact .col-6 .email-wrapper form .form-part label {
             display: inline-block;
-            width: 100px; }
-          .contact .grid-2 .email-wrapper form .form-part input,
-          .contact .grid-2 .email-wrapper form .form-part textarea {
+            width: 100%; }
+          .contact .col-6 .email-wrapper form .form-part input,
+          .contact .col-6 .email-wrapper form .form-part textarea {
             border: 0;
             width: 247px;
             height: 23.5px;
@@ -960,13 +1010,28 @@ body .tp-show {
             -o-transition-duration: 0.5s;
             -webkit-transition-duration: 0.5s;
             transition-duration: 0.5s; }
-            .contact .grid-2 .email-wrapper form .form-part input:focus,
-            .contact .grid-2 .email-wrapper form .form-part textarea:focus {
+            .contact .col-6 .email-wrapper form .form-part input:focus,
+            .contact .col-6 .email-wrapper form .form-part textarea:focus {
               background-color: #00A7A4; }
-          .contact .grid-2 .email-wrapper form .form-part textarea {
-            height: 105px; }
+          .contact .col-6 .email-wrapper form .form-part textarea {
+            height: 105px;
+            resize: none; }
+          .contact .col-6 .email-wrapper form .form-part .button {
+            border: 0;
+            background-color: #F5BC17;
+            color: #9f7807;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 5px 14px;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s; }
+            .contact .col-6 .email-wrapper form .form-part .button:hover {
+              color: #F5BC17;
+              background-color: #9f7807; }
   @media only screen and (min-width: 50px) and (max-width: 639px) {
     .contact {
       background: linear-gradient(#00a7a4 50%, #015a56 50%); }
-      .contact .grid-2 {
+      .contact .col-6 {
         width: 100%; } }
