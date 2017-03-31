@@ -3,13 +3,9 @@
 
 @import "compass";
 @import "config/reset";
+@import "helpers/mixins";
 @import "config/variables";
 @import "config/typography";
-
-/*----------  helpers
-------------------------------------------------------------------------------*/
-
-@import "helpers/mixins";
 
 /*----------  layout
 ------------------------------------------------------------------------------*/
@@ -136,6 +132,16 @@
         width: 80%;
         padding: 33px 0 115px 0;
     }
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {
+        p {
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .we-roar-digital {
+            padding: 33px 0 50px 0;
+        }
+    }
 }
 
 
@@ -155,7 +161,7 @@
         color: $gray;
     }
     .thumbs-wrapper {
-        margin: 18px 0 40px 0;
+        margin: 18px 0 0 0;
         .da-thumbs {
             list-style: none;
             position: relative;
@@ -209,23 +215,68 @@
         }
     }
     @include breakpoint(tablet) {
+        p {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 14px;
+            color: $gray;
+            font-size: 14px;
+        }
         .thumbs-wrapper {
             .da-thumbs li {
                 width: 49%;
             }
             .da-thumbs li a div span {
-                font-size: 21px;
-                padding: 5px 0;
-                margin: 10px 20px 20px 20px;
+                font-size: 15px;
+                padding: 3px 0;
+                margin: 5px 20px 12px 20px;
             }
             .da-thumbs li a div p {
-                font-size: 12px;
-                padding: 0;
+                font-size: 11px;
+                padding: 10px 0 0 0;
                 margin: 10px 10px 10px 10px;
             }
         }
     }
+    @include breakpoint(phone-mid) {
+        p {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 14px;
+            color: $gray;
+            font-size: 14px;
+        }
+        .thumbs-wrapper {
+            .da-thumbs li {
+                width: 49%;
+            }
+            img {
+                width: 100%;
+            }
+            h2 {
+                font-size: 35px;
+            }
+            .da-thumbs li a div span {
+                font-size: 16px;
+                padding: 5px 0;
+                margin: 0 auto;
+            }
+            .da-thumbs li a div p {
+                font-size: 10px;
+                padding: 0;
+                margin: 10px 10px 10px 10px;
+                line-height: 13px;
+            }
+        }
+    }
     @include breakpoint(phone) {
+        p {
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 14px;
+            color: $gray;
+            font-size: 14px;
+        }
         .thumbs-wrapper {
             .da-thumbs li {
                 width: 100%;
@@ -237,15 +288,15 @@
                 font-size: 35px;
             }
             .da-thumbs li a div span {
-                font-size: 22px;
+                font-size: 16px;
                 padding: 5px 0;
-                margin: 10px 20px 10px 20px;
+                margin: 0 auto;
             }
             .da-thumbs li a div p {
-                font-size: 14px;
+                font-size: 10px;
                 padding: 0;
                 margin: 10px 10px 10px 10px;
-                line-height: 27px;
+                line-height: 13px;
             }
         }
     }
@@ -316,21 +367,65 @@
         }
     }
     @include breakpoint(tablet-big) {}
-    @include breakpoint(tablet) {}
-    @include breakpoint(phone) {
+    @include breakpoint(tablet) {
         .ot-wrapper {
+            max-width: 100%;
             .ot-box {
-                width: 100%;
-                text-align: center;
+                width: 28.5%;
+                text-align: left;
                 margin-bottom: 25px;
                 img {
                     width: 55%;
                     margin: 0;
                 }
                 p {
-                    width: 80%;
-                    margin: 0 auto;
+                    width: 100%;
                     padding-bottom: 10px;
+                }
+                .border-bot {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone-mid) {
+        .ot-wrapper {
+            max-width: 100%;
+            .ot-box {
+                width: 28.5%;
+                text-align: left;
+                margin-bottom: 25px;
+                img {
+                    width: 55%;
+                    margin: 0;
+                }
+                p {
+                    width: 100%;
+                    padding-bottom: 10px;
+                }
+                .border-bot {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        .ot-wrapper {
+            max-width: 100%;
+            .ot-box {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 25px;
+                img {
+                    width: 55%;
+                    margin: 0;
+                }
+                p {
+                    width: 100%;
+                    padding-bottom: 10px;
+                }
+                .border-bot {
+                    margin: 0;
                 }
             }
         }
@@ -351,6 +446,7 @@
         margin: 0 auto;
     }
     .rotator-wrapper {
+        width: 60%;
         display: block;
         margin: 0 auto;
         overflow: hidden;
@@ -379,15 +475,30 @@
         }
     }
     @include breakpoint(tablet-big) {}
-    @include breakpoint(tablet) {}
+    @include breakpoint(tablet) {
+        .rotator-wrapper {
+            width: 75%;
+            .col-4 {
+                width: 24%;
+                padding: 0 1%;
+            }
+        }
+    }
+    @include breakpoint(phone-mid) {
+        .rotator-wrapper {
+            width: 100%;
+            .col-4 {
+                width: 24%;
+                padding: 0 1%;
+            }
+        }
+    }
     @include breakpoint(phone) {
         .rotator-wrapper {
+            width: 100%;
             .col-4 {
-                width: 15%;
-                padding: 0;
-                img {
-                    width: 25px;
-                }
+                width: 24%;
+                padding: 0 1%;
             }
         }
     }
@@ -487,21 +598,24 @@
 
 .contact {
     text-align: center;
-    padding-bottom: 40px;
     width: 100%;
     background: linear-gradient(to right, $green 50%, $green-dark 50%);
+    // background: $green;
     overflow: hidden;
     .col-6 {
         width: 50%;
         float: left;
         text-align: right;
+        background: $green;
         .contact-wrapper {
-            padding-right: 14%;
             overflow: hidden;
+            background: $green;
+            width: 100%;
+            padding: 41px 50px 0 0;
             .details-wrapper {
                 float: right;
                 text-align: left;
-                padding: 50px 0;
+                margin: 0 auto;
                 h2 {
                     padding: 0;
                 }
@@ -513,17 +627,21 @@
                 }
             }
         }
+    }
+    .col-6 {
+        background: $green-dark;
         .email-wrapper {
             overflow: hidden;
-            padding: 12% 0 0 14%;
             float: left;
+            margin: 0 auto;
+            padding: 50px;
             form {
                 width: 100%;
                 .form-part {
                     color: $white;
                     text-align: left;
-                    width: 351px;
-                    padding-bottom: 25px;
+                    width: 100%;
+                    padding-bottom: 10px;
                     label {
                         display: inline-block;
                         width: 100%;
@@ -561,11 +679,189 @@
         }
     }
     @include breakpoint(tablet-big) {}
-    @include breakpoint(tablet) {}
-    @include breakpoint(phone) {
-        background: linear-gradient($green 50%, $green-dark 50%);
+    @include breakpoint(tablet) {
+        .col-6 {
+            .contact-wrapper {
+                padding: 25px 0;
+                margin: 0 auto;
+                .details-wrapper {
+                    float: none;
+                    width: 50%;
+                    margin: 0 auto;
+                    h2 {
+                        padding: 0;
+                        text-align: center;
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $white;
+                        padding: 0;
+                    }
+                }
+            }
+        }
         .col-6 {
             width: 100%;
+            .email-wrapper {
+                padding: 25px 0;
+                width: 100%;
+                form {
+                    width: 50%;
+                    margin: 0 auto;
+                    .form-part {
+                        label {
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        input,
+                        textarea {
+                            width: 100%;
+                            height: 23.5px;
+                        }
+                        textarea {
+                            height: 105px;
+                        }
+                        .button {
+                            border: 0;
+                            background-color: $yellow;
+                            color: darken($yellow, 20%);
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            padding: 5px 14px;
+                            @include transition-duration($slowDuration);
+                            &:hover {
+                                color: $yellow;
+                                background-color: darken($yellow, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(phone-mid) {
+        // background: linear-gradient($green 50%, $green-dark 50%);
+        .col-6 {
+            .contact-wrapper {
+                padding: 25px 0;
+                margin: 0 auto;
+                .details-wrapper {
+                    float: none;
+                    width: 50%;
+                    margin: 0 auto;
+                    h2 {
+                        padding: 0;
+                        text-align: center;
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $white;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .col-6 {
+            width: 100%;
+            .email-wrapper {
+                padding: 25px 0;
+                width: 100%;
+                form {
+                    width: 50%;
+                    margin: 0 auto;
+                    .form-part {
+                        label {
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        input,
+                        textarea {
+                            width: 100%;
+                            height: 23.5px;
+                        }
+                        textarea {
+                            height: 105px;
+                        }
+                        .button {
+                            border: 0;
+                            background-color: $yellow;
+                            color: darken($yellow, 20%);
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            padding: 5px 14px;
+                            @include transition-duration($slowDuration);
+                            &:hover {
+                                color: $yellow;
+                                background-color: darken($yellow, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        // background: linear-gradient($green 50%, $green-dark 50%);
+        .col-6 {
+            .contact-wrapper {
+                padding: 25px 0;
+                margin: 0 auto;
+                .details-wrapper {
+                    float: none;
+                    width: 69%;
+                    margin: 0 auto;
+                    h2 {
+                        padding: 0;
+                        text-align: center;
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: $white;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        .col-6 {
+            width: 100%;
+            .email-wrapper {
+                padding: 25px 0;
+                width: 100%;
+                form {
+                    width: 69%;
+                    margin: 0 auto;
+                    .form-part {
+                        label {
+                            display: inline-block;
+                            width: 100%;
+                        }
+                        input,
+                        textarea {
+                            width: 100%;
+                            height: 23.5px;
+                        }
+                        textarea {
+                            height: 105px;
+                        }
+                        .button {
+                            border: 0;
+                            background-color: $yellow;
+                            color: darken($yellow, 20%);
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            padding: 5px 14px;
+                            @include transition-duration($slowDuration);
+                            &:hover {
+                                color: $yellow;
+                                background-color: darken($yellow, 20%);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

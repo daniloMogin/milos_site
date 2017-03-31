@@ -23,7 +23,7 @@
             float: left;
             li {
                 display: inline;
-                padding-left: 15px;
+                padding-left: 6px;
                 &:first-of-type {
                     padding: 0;
                 }
@@ -65,7 +65,10 @@
             @include transition-timing-function(ease-out);
         }
     }
-    .mobile-wrap {
+    .mobile-nav {
+        display: none;
+    }
+    .nav-btn {
         display: none;
     }
     @include breakpoint(tablet-big) {}
@@ -73,6 +76,7 @@
         .menubar {
             .headCon-wrapp {
                 li {
+                    padding-left: 4px;
                     a {
                         font-size: 10px;
                         margin: 0;
@@ -86,44 +90,137 @@
             }
         }
     }
-    @include breakpoint(phone) {
+    @include breakpoint(phone-mid) {
         .main-nav {
             display: none;
         }
         .mobile-wrap {
-            display: block;
+            position: relative;
+            .nav-btn {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                background: $green;
+                padding: 2px 10px 0 10px;
+            }
             .mobile-nav {
                 position: fixed;
-                overflow: auto;
+                // overflow: auto;
                 top: 0;
                 left: 0;
-                width: 70%;
+                width: 47%;
                 z-index: 60;
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 20px;
-                display: block;
                 float: left;
                 clear: both;
                 background-color: #00A7A4;
                 .mobile-logo-wrapp {
                     background: $white;
                     img {
-                        width: 75%;
+                        width: 70%;
+                        padding: 7px 0;
                     }
                 }
-                .mobile-headCon-wrapp {
+                .mobile-links-wrapp {
                     background: $green;
+                    li {
+                        padding: 2px 0;
+                        a {
+                            font-size: 15px;
+                        }
+                    }
                 }
                 .mobile-social-wrapp {
                     background: $yellow;
+                    i {
+                        padding-bottom: 35px;
+                        transform: translateY(8px);
+                    }
                 }
             }
             .show {
                 display: none;
             }
-            .hide-nav-btn {
+            .show-nav-btn,
+            .show-mobile-nav {
+                display: block;
+            }
+            .show-mobile-nav {
+                position: absolute;
+                width: 172px;
+            }
+            .hide-mobile-nav {
+                position: absolute;
+                width: 0;
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        .main-nav {
+            display: none;
+        }
+        .mobile-wrap {
+            position: relative;
+            .nav-btn {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                background: $green;
+                padding: 2px 10px 0 10px;
+            }
+            .mobile-nav {
+                position: fixed;
+                // overflow: auto;
+                top: 0;
+                left: 0;
+                width: 47%;
+                z-index: 60;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 20px;
+                float: left;
+                clear: both;
+                background-color: #00A7A4;
+                .mobile-logo-wrapp {
+                    background: $white;
+                    img {
+                        width: 70%;
+                        padding: 7px 0;
+                    }
+                }
+                .mobile-links-wrapp {
+                    background: $green;
+                    li {
+                        padding: 2px 0;
+                        a {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .mobile-social-wrapp {
+                    background: $yellow;
+                    i {
+                        padding-bottom: 35px;
+                        transform: translateY(8px);
+                    }
+                }
+            }
+            .show {
                 display: none;
+            }
+            .show-nav-btn,
+            .show-mobile-nav {
+                display: block;
+            }
+            .show-mobile-nav {
+                position: absolute;
+                width: 172px;
+            }
+            .hide-mobile-nav {
+                position: absolute;
+                width: 0;
             }
         }
     }

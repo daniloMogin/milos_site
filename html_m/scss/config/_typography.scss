@@ -16,6 +16,11 @@ h2 {
     padding: 43px 0 23px 0;
     text-transform: uppercase;
     color: $white;
+    @include breakpoint(tablet-big) {}
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {
+        padding: 10px 0 0 0;
+    }
 }
 
 h3 {
@@ -39,7 +44,7 @@ h5 {
 p {
     font-weight: 700;
     font-size: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 a {
