@@ -1,5 +1,5 @@
 .header {
-    background-color: $green;
+    background-color: transparent;
     text-align: center;
     position: fixed;
     /* Set the navbar to fixed position */
@@ -21,6 +21,7 @@
         .headCon-wrapp {
             width: 60%;
             float: left;
+            background: $green;
             li {
                 display: inline;
                 padding-left: 6px;
@@ -65,12 +66,6 @@
             @include transition-timing-function(ease-out);
         }
     }
-    .mobile-nav {
-        display: none;
-    }
-    .nav-btn {
-        display: none;
-    }
     @include breakpoint(tablet-big) {}
     @include breakpoint(tablet) {
         .menubar {
@@ -94,133 +89,83 @@
         .main-nav {
             display: none;
         }
-        .mobile-wrap {
-            position: relative;
-            .nav-btn {
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                background: $green;
-                padding: 2px 10px 0 10px;
-            }
-            .mobile-nav {
-                position: fixed;
-                // overflow: auto;
-                top: 0;
-                left: 0;
-                width: 47%;
-                z-index: 60;
-                font-weight: 700;
-                font-size: 15px;
-                line-height: 20px;
-                float: left;
-                clear: both;
-                background-color: #00A7A4;
-                .mobile-logo-wrapp {
-                    background: $white;
-                    img {
-                        width: 70%;
-                        padding: 7px 0;
-                    }
-                }
-                .mobile-links-wrapp {
-                    background: $green;
-                    li {
-                        padding: 2px 0;
-                        a {
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .mobile-social-wrapp {
-                    background: $yellow;
-                    i {
-                        padding-bottom: 35px;
-                        transform: translateY(8px);
-                    }
-                }
-            }
-            .show {
-                display: none;
-            }
-            .show-nav-btn,
-            .show-mobile-nav {
-                display: block;
-            }
-            .show-mobile-nav {
-                position: absolute;
-                width: 172px;
-            }
-            .hide-mobile-nav {
-                position: absolute;
-                width: 0;
-            }
-        }
     }
     @include breakpoint(phone) {
         .main-nav {
             display: none;
         }
-        .mobile-wrap {
-            position: relative;
+    }
+}
+
+.mobileWrapp {
+    display: none;
+    // position: fixed;
+    // /* Set the navbar to fixed position */
+    // top: 0;
+    // /* Position the navbar at the top of the page */
+    // z-index: 9999;
+    width: 100%;
+    @include breakpoint(phone-mid) {
+        display: inline-block;
+        .mobile-wrapp {
             .nav-btn {
-                position: absolute;
-                top: 10px;
-                right: 20px;
                 background: $green;
-                padding: 2px 10px 0 10px;
+                width: 100%;
+                display: flex !important;
+                justify-content: center;
             }
             .mobile-nav {
-                position: fixed;
-                // overflow: auto;
-                top: 0;
-                left: 0;
-                width: 47%;
-                z-index: 60;
-                font-weight: 700;
-                font-size: 15px;
-                line-height: 20px;
-                float: left;
-                clear: both;
-                background-color: #00A7A4;
-                .mobile-logo-wrapp {
-                    background: $white;
-                    img {
-                        width: 70%;
-                        padding: 7px 0;
-                    }
-                }
+                position: absolute;
+                z-index: 999;
+                width: 100%;
+                background: $green;
+                text-align: center;
+                height: 0;
+                overflow: hidden;
+                @include transition-duration($slowDuration);
+                @include transition-timing-function(ease-in-out);
                 .mobile-links-wrapp {
-                    background: $green;
-                    li {
-                        padding: 2px 0;
-                        a {
-                            font-size: 15px;
-                        }
-                    }
-                }
-                .mobile-social-wrapp {
-                    background: $yellow;
-                    i {
-                        padding-bottom: 35px;
-                        transform: translateY(8px);
+                    padding: 15px 0;
+                    a {
+                        text-transform: uppercase;
                     }
                 }
             }
             .show {
-                display: none;
-            }
-            .show-nav-btn,
-            .show-mobile-nav {
+                height: 240px;
                 display: block;
             }
-            .show-mobile-nav {
-                position: absolute;
-                width: 172px;
+        }
+    }
+    @include breakpoint(phone) {
+        display: inline-block;
+        .mobile-wrapp {
+            .nav-btn {
+                background: $green;
+                width: 100%;
+                display: flex !important;
+                justify-content: center;
             }
-            .hide-mobile-nav {
+            .mobile-nav {
                 position: absolute;
-                width: 0;
+                z-index: 999;
+                width: 100%;
+                background: $green;
+                text-align: center;
+                height: 0;
+                overflow: hidden;
+                @include transition-duration($slowDuration);
+                @include transition-timing-function(ease-in-out);
+                .mobile-links-wrapp {
+                    padding: 15px 0;
+                    a {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .show {
+                height: 240px;
+                display: block;
             }
         }
     }

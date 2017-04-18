@@ -17,6 +17,7 @@
 /*----------  libs
 ------------------------------------------------------------------------------*/
 
+@import "libs/_menu-burger.scss";
 
 /*----------  partials
 ------------------------------------------------------------------------------*/
@@ -28,18 +29,32 @@
 ------------------------------------------------------------------------------*/
 
 .hero {
-    height: 576px;
-    background: url('../../assets/img/content/SBM-FB-01-RES.png');
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: url('../../assets/img/content/slider-banner1_11.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0 auto;
+    padding-top: 65.523059617547806524184476940384%;
+    margin-top: 66px;
     img {
-        width: 100%;
-        height: auto;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
-    .hero-wrapper,
-    img {
-        max-height: 485px;
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone-mid) {
+        margin-top: 0;
+    }
+    @include breakpoint(phone) {
+        margin-top: 0;
     }
 }
 
@@ -90,15 +105,28 @@
             }
         }
     }
+    @include breakpoint(phone-mid) {
+        .statsbar {
+            .stat {
+                padding: 5px 0;
+                .stat-number {
+                    font-size: 19px;
+                }
+                .stat-title {
+                    font-size: 8.5px;
+                }
+            }
+        }
+    }
     @include breakpoint(phone) {
         .statsbar {
             .stat {
-                padding-bottom: 7px;
+                padding: 9px 0;
                 .stat-number {
                     font-size: 16px;
                 }
                 .stat-title {
-                    font-size: 5.5px;
+                    font-size: 7.5px;
                 }
             }
         }
@@ -599,7 +627,7 @@
 .contact {
     text-align: center;
     width: 100%;
-    background: linear-gradient(to right, $green 50%, $green-dark 50%);
+    background: linear-gradient(to right, $green 50%, $red 50%);
     // background: $green;
     overflow: hidden;
     .col-6 {
@@ -629,7 +657,7 @@
         }
     }
     .col-6 {
-        background: $green-dark;
+        background: $red;
         .email-wrapper {
             overflow: hidden;
             float: left;
@@ -654,7 +682,7 @@
                         background-color: $white;
                         @include transition-duration($slowDuration);
                         &:focus {
-                            background-color: $green;
+                            background-color: $yellow;
                         }
                     }
                     textarea {
