@@ -4,6 +4,7 @@
 .ico {
     display: inline-block;
     width: 24.185197px;
+    margin-top: 5px;
     // @include transition-duration(.5s);
     &:last-of-type {
         padding: 0;
@@ -16,6 +17,7 @@
     }
     &.instagram {
         @include sprite(ico-instagram);
+        margin: 0 5px;
         &:hover {
             @include sprite(ico-instagram-yellow);
         }
